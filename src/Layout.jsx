@@ -1,12 +1,13 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import Nav from "./components/Nav";
 
 const Layout = () => {
   return (
-    <Container maxWidth="xl" sx={{ bgcolor: "red" }}>
-      <Typography>Hello world</Typography>
+    <Box sx={{ bgcolor: "black" }}>
+      <Nav />
       <Outlet />
-    </Container>
+    </Box>
   );
 };
 export default Layout;

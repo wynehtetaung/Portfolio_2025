@@ -1,10 +1,11 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
+import SectionOne from "../sections/SectionOne";
 
 const Home = () => {
   return (
-    <Box>
-      <Container maxWidth="lg" sx={{ bgcolor: "green" }}>
-        <Typography>I am Home</Typography>
+    <Box sx={{ bgcolor: "black" }}>
+      <Container maxWidth="lg">
+        <SectionOne />
       </Container>
     </Box>
   );
