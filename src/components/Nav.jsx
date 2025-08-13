@@ -32,13 +32,13 @@ const Nav = () => {
             pathname === "/"
               ? {
                   position: "relative",
-                  color: "red",
+                  color: "#FF0B55",
                   ":before": {
                     content: '""',
                     position: "absolute",
                     width: 8,
                     height: 8,
-                    bgcolor: "red",
+                    bgcolor: "#FF0B55",
                     borderRadius: "50%",
                     bottom: "-8px",
                     left: "50%",
@@ -47,7 +47,7 @@ const Nav = () => {
                 }
               : {
                   ":hover": {
-                    color: "red",
+                    color: "#FF0B55",
                   },
                 }
           }
@@ -61,13 +61,13 @@ const Nav = () => {
             pathname === "/my-work"
               ? {
                   position: "relative",
-                  color: "red",
+                  color: "#FF0B55",
                   ":before": {
                     content: '""',
                     position: "absolute",
                     width: 8,
                     height: 8,
-                    bgcolor: "red",
+                    bgcolor: "#FF0B55",
                     borderRadius: "50%",
                     bottom: "-8px",
                     left: "50%",
@@ -76,7 +76,7 @@ const Nav = () => {
                 }
               : {
                   "&:hover": {
-                    color: "red",
+                    color: "#FF0B55",
                   },
                 }
           }
@@ -89,13 +89,13 @@ const Nav = () => {
             pathname === "/about"
               ? {
                   position: "relative",
-                  color: "red",
+                  color: "#FF0B55",
                   ":before": {
                     content: '""',
                     position: "absolute",
                     width: 8,
                     height: 8,
-                    bgcolor: "red",
+                    bgcolor: "#FF0B55",
                     borderRadius: "50%",
                     bottom: "-8px",
                     left: "50%",
@@ -104,7 +104,7 @@ const Nav = () => {
                 }
               : {
                   "&:hover": {
-                    color: "red",
+                    color: "#FF0B55",
                   },
                 }
           }
@@ -115,7 +115,7 @@ const Nav = () => {
       <Typography
         sx={{
           "&:hover": {
-            color: "red",
+            color: "#FF0B55",
           },
         }}
       >
