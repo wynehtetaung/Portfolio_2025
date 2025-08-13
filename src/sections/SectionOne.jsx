@@ -55,8 +55,11 @@ const SectionOne = () => {
           </Typography>
           <Button
             variant="contained"
-            color="error"
-            sx={{ color: "#FF0B55", borderRadius: "50px", mt: "58px" }}
+            sx={{
+              borderRadius: "50px",
+              mt: "58px",
+              backgroundColor: "#FF0B55",
+            }}
           >
             <Typography sx={{ color: "#ffffff" }}>Fun Fact:</Typography>
           </Button>

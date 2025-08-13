@@ -7,6 +7,7 @@ import pj3 from "../assets/images/pj3.png";
 import pj4 from "../assets/images/pj4.png";
 import upArrow from "../assets/images/arrow-up-right.png";
 import SectionSlider from "./SectionSlider";
+import SectionThree from "../sections/SectionThree";
 
 const Home = () => {
   const slideData = {
@@ -41,18 +42,23 @@ const Home = () => {
         >
           <Button
             variant="contained"
-            color="error"
             sx={{
               mt: "35px",
               mb: "70px",
               width: "200px",
               height: "66px",
               borderRadius: "50px",
+              backgroundColor: "#FF0B55",
             }}
           >
             More Projects <img width={24} height={24} src={upArrow} />
           </Button>
         </Box>
+      </Box>
+      <Box sx={{ bgcolor: "#000000" }}>
+        <Container maxWidth="lg">
+          <SectionThree />
+        </Container>
       </Box>
     </Box>
   );
