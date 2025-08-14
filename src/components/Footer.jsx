@@ -11,7 +11,7 @@ const Footer = () => {
       <Container
         maxWidth="lg"
         sx={{
-          my: "50px",
+          py: "50px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

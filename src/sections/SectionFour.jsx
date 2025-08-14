@@ -67,7 +67,7 @@ const SectionFour = () => {
   return (
     <Box>
       <Typography
-        sx={{ mt: "70px", fontSize: 48, fontWeight: "bold", mb: "36px" }}
+        sx={{ pt: "70px", fontSize: 48, fontWeight: "bold", mb: "36px" }}
       >
         What people say <span style={{ color: "#FF0B55" }}>about me!</span>
       </Typography>

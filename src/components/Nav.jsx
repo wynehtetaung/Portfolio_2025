@@ -61,9 +61,11 @@ const Nav = () => {
         </Typography>
 
         <Typography
-          onClick={() => navigate("/my-work")}
+          onClick={() => navigate("/my-work/1")}
           sx={
-            pathname === "/my-work"
+            pathname === "/my-work/1" ||
+            pathname === "/my-work/2" ||
+            pathname === "/my-work/3"
               ? {
                   position: "relative",
                   color: "#FF0B55",

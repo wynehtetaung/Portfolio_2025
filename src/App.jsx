@@ -22,6 +22,12 @@ const router = createBrowserRouter([
       {
         path: "/my-work",
         Component: MyWork,
+        children: [
+          {
+            path: "/my-work/:id",
+            Component: MyWork,
+          },
+        ],
       },
       {
         path: "/about",

@@ -7,6 +7,7 @@ const SectionSlider = ({ slideData }) => {
       <Box sx={{ display: "flex", overflow: "hidden" }}>
         {slideData.image.map((data, i) => (
           <Box
+            key={i}
             sx={
               slideData.action.hover && {
                 ":hover": {
@@ -18,7 +19,6 @@ const SectionSlider = ({ slideData }) => {
             <img
               width={slideData.width}
               height={slideData.height}
-              key={i}
               src={data}
               style={{ marginLeft: slideData.marginLeft }}
             />
