@@ -3,7 +3,11 @@ import Marquee from "react-fast-marquee";
 
 const SectionSlider = ({ slideData }) => {
   return (
-    <Marquee pauseOnHover={slideData.action.pause} play={slideData.action.play}>
+    <Marquee
+      pauseOnHover={slideData.action.pause}
+      play={slideData.action.play}
+      direction={slideData.action.direction}
+    >
       <Box sx={{ display: "flex", overflow: "hidden" }}>
         {slideData.image.map((data, i) => (
           <Box

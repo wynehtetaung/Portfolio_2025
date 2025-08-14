@@ -23,6 +23,7 @@ const Home = () => {
       pause: false,
       hover: true,
       play: true,
+      direction: "right",
     },
   };
   return (

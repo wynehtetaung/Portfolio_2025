@@ -18,6 +18,7 @@ const SectionOne = () => {
       pause: true,
       hover: false,
       play: true,
+      direction: "left",
     },
   };
 
