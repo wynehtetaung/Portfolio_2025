@@ -17,7 +17,7 @@ const SectionOne = () => {
     action: {
       pause: true,
       hover: false,
-      play: false,
+      play: true,
     },
   };
 

@@ -1,7 +1,8 @@
 import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import MyWork from "./pages/MyWork";
 
 const theme = createTheme({
   typography: {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-work",
-        Component: Home,
+        Component: MyWork,
       },
       {
         path: "/about",

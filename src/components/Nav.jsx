@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import LOGO from "../assets/images/Freddie....png";
+import LOGO_BLACK from "../assets/images/Freddie... _black.png";
 import { useLocation, useNavigate } from "react-router-dom";
 const Nav = () => {
   const navigate = useNavigate();
@@ -18,7 +19,11 @@ const Nav = () => {
         cursor: "pointer",
       }}
     >
-      <img width={111} height={29} srcSet={`${LOGO}`} />
+      <img
+        width={111}
+        height={29}
+        srcSet={`${pathname === "/" ? LOGO : LOGO_BLACK} `}
+      />
       <Box
         sx={{
           display: "flex",
@@ -112,15 +117,20 @@ const Nav = () => {
           about
         </Typography>
       </Box>
-      <Typography
-        sx={{
-          "&:hover": {
-            color: "#FF0B55",
-          },
-        }}
+      <a
+        href="#contactMe"
+        style={{ outline: "none", textDecoration: "none", color: "#bababa" }}
       >
-        content
-      </Typography>
+        <Typography
+          sx={{
+            "&:hover": {
+              color: "#FF0B55",
+            },
+          }}
+        >
+          content
+        </Typography>
+      </a>
     </Container>
   );
 };
