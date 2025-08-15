@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import MyWork from "./pages/MyWork";
+import ProjectDetail from "./pages/ProjectDetail";
 
 const theme = createTheme({
   typography: {
@@ -22,12 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/my-work",
         Component: MyWork,
-        children: [
-          {
-            path: "/my-work/:id",
-            Component: MyWork,
-          },
-        ],
+      },
+      {
+        path: "/my-work/:sub",
+        Component: MyWork,
+      },
+      {
+        path: "/my-work/:sub/:id",
+        Component: ProjectDetail,
       },
       {
         path: "/about",

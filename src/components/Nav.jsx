@@ -1,10 +1,11 @@
 import { Box, Container, Typography } from "@mui/material";
 import LOGO from "../assets/images/Freddie....png";
 import LOGO_BLACK from "../assets/images/Freddie... _black.png";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 const Nav = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { sub, id } = useParams();
 
   return (
     <Container
@@ -61,11 +62,10 @@ const Nav = () => {
         </Typography>
 
         <Typography
-          onClick={() => navigate("/my-work/1")}
+          onClick={() => navigate("/my-work/app")}
           sx={
-            pathname === "/my-work/1" ||
-            pathname === "/my-work/2" ||
-            pathname === "/my-work/3"
+            pathname === `/my-work/${sub}` ||
+            pathname === `/my-work/${sub}/${id}`
               ? {
                   position: "relative",
                   color: "#FF0B55",

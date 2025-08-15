@@ -1,26 +1,16 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import project1 from "../assets/images/pj1.png";
-import project2 from "../assets/images/pj2.png";
-import project3 from "../assets/images/pj3.png";
-import project4 from "../assets/images/pj4.png";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
+import { projectData } from "../store/store";
 
 const MyWork = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { id } = useParams();
+  const { sub } = useParams();
 
-  const cardData = {
-    1: [project1, project3, project4],
-    2: [project3, project2],
-    3: [project1, project2, project3, project4],
-  };
-
-  const filterData = cardData[id];
-  console.log(filterData);
+  const filterData = projectData[sub];
 
   return (
     <Box>
@@ -73,10 +63,10 @@ const MyWork = () => {
               }}
             >
               <Button
-                onClick={() => navigate("/my-work/1")}
-                variant={pathname === "/my-work/1" ? "contained" : "text"}
+                onClick={() => navigate("/my-work/app")}
+                variant={pathname === "/my-work/app" ? "contained" : "text"}
                 sx={
-                  pathname === "/my-work/1"
+                  pathname === "/my-work/app"
                     ? {
                         borderRadius: "50px",
                         width: "170px",
@@ -90,15 +80,13 @@ const MyWork = () => {
                       }
                 }
               >
-                <Typography id="designOne" sx={{ fontSize: 14 }}>
-                  APP Design
-                </Typography>
+                <Typography sx={{ fontSize: 14 }}>APP Design</Typography>
               </Button>
               <Button
-                onClick={() => navigate("/my-work/2")}
-                variant={pathname === "/my-work/2" ? "contained" : "text"}
+                onClick={() => navigate("/my-work/web")}
+                variant={pathname === "/my-work/web" ? "contained" : "text"}
                 sx={
-                  pathname === "/my-work/2"
+                  pathname === "/my-work/web"
                     ? {
                         borderRadius: "50px",
                         width: "170px",
@@ -112,15 +100,13 @@ const MyWork = () => {
                       }
                 }
               >
-                <Typography id="designTwo" sx={{ fontSize: 14 }}>
-                  WEB Design
-                </Typography>
+                <Typography sx={{ fontSize: 14 }}>WEB Design</Typography>
               </Button>
               <Button
-                onClick={() => navigate("/my-work/3")}
-                variant={pathname === "/my-work/3" ? "contained" : "text"}
+                onClick={() => navigate("/my-work/design")}
+                variant={pathname === "/my-work/design" ? "contained" : "text"}
                 sx={
-                  pathname === "/my-work/3"
+                  pathname === "/my-work/design"
                     ? {
                         borderRadius: "50px",
                         width: "170px",
@@ -134,9 +120,7 @@ const MyWork = () => {
                       }
                 }
               >
-                <Typography id="designThree" sx={{ fontSize: 14 }}>
-                  LOGO Design
-                </Typography>
+                <Typography sx={{ fontSize: 14 }}>LOGO Design</Typography>
               </Button>
             </Box>
           </Box>
@@ -148,10 +132,17 @@ const MyWork = () => {
             gap: "32px",
             mt: "51px",
             mb: "70px",
+            cursor: "pointer",
           }}
         >
           {filterData.map((data, i) => (
-            <img key={i} src={data} width={560} height={470} />
+            <img
+              key={i}
+              src={data.image}
+              width={560}
+              height={470}
+              onClick={() => navigate(`/my-work/${sub}/${data.id}`)}
+            />
           ))}
         </Box>
       </Container>
