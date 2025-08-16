@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import ReviewCard from "../components/ReviewCard";
 import avatarImage from "../assets/images/avatar.jpeg";
-import upArrow from "../assets/images/arrow-up-right.png";
 import Question from "../components/Question";
+import ButtonResume from "../components/Button_resume";
 
 const SectionFour = () => {
   const reviewCardData = [
@@ -98,20 +98,8 @@ const SectionFour = () => {
           >
             Got questions or need advice? Get clear insights to move forward.
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "#ff0b55",
-              width: "237px",
-              height: "66px",
-              borderRadius: "50px",
-              mt: "87px",
-              mb: "70px",
-            }}
-          >
-            <Typography>DOWNLOAD RESUME</Typography>
-            <img src={upArrow} width={24} height={24} />
-          </Button>
+
+          <ButtonResume />
         </Box>
         {/* Right  */}
         <Box sx={{ width: "58%" }}>

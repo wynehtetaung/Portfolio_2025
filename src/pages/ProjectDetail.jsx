@@ -3,12 +3,29 @@ import Nav from "../components/Nav";
 import leftArrow from "../assets/images/chevron-left.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { projectData } from "../store/store";
+import pj1 from "../assets/images/pj1.png";
+import pj2 from "../assets/images/pj2.png";
+import pj3 from "../assets/images/pj3.png";
+import pj4 from "../assets/images/pj4.png";
+import SectionSlider from "../components/SectionSlider";
+import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const navigate = useNavigate();
   const { id, sub } = useParams();
   const filterData = projectData[sub].find((data) => data.id == id);
-  console.log(filterData);
+  const slideData = {
+    image: [pj1, pj2, pj3, pj4],
+    width: 470,
+    height: 470,
+    marginLeft: "20px",
+    action: {
+      pause: false,
+      hover: true,
+      play: true,
+      direction: "right",
+    },
+  };
   return (
     <Box>
       <Nav />
@@ -265,6 +282,28 @@ const ProjectDetail = () => {
           </Typography>
         </Box>
       </Container>
+      <Box sx={{ bgcolor: "#000000" }}>
+        <Container maxWidth="lg" sx={{ pt: "50px", pb: "35px" }}>
+          <Typography
+            sx={{ color: "#ffffff", fontSize: 48, fontWeight: "bold" }}
+          >
+            Other <span style={{ color: "#ff0b55" }}>projects.</span>
+          </Typography>
+          <Typography sx={{ color: "#a8a8a8", fontSize: 16 }}>
+            I turn complex ideas into simple, engaging, and delightful digital
+            interfaces.
+          </Typography>
+        </Container>
+        <SectionSlider slideData={slideData} />
+        <Box
+          sx={{
+            width: "auto",
+            bgcolor: "#a8a8a8",
+            mt: "77px",
+          }}
+        ></Box>
+        <Footer />
+      </Box>
     </Box>
   );
 };

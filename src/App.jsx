@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import MyWork from "./pages/MyWork";
 import ProjectDetail from "./pages/ProjectDetail";
+import About from "./pages/About";
 
 const theme = createTheme({
   typography: {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        Component: Home,
+        Component: About,
       },
     ],
   },

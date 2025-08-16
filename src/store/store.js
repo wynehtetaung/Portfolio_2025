@@ -85,3 +85,35 @@ The app also has a step count function, allowing users to connect their movement
     },
   ],
 };
+
+export const userData = {
+  birthday: "27 may 1999",
+  age: "26 years old",
+  degree: "Bachelor of Art",
+  email: "thitphone95@gmail.com",
+  city: "Yangon City",
+  phone: "+959 757 359 906",
+};
+
+export const skills = [
+  {
+    title: "User Interface",
+    skill: "70%",
+  },
+  {
+    title: "User Experience",
+    skill: "74%",
+  },
+  {
+    title: "html",
+    skill: "62%",
+  },
+  {
+    title: "css",
+    skill: "58%",
+  },
+  {
+    title: "javascript",
+    skill: "40%",
+  },
+];
