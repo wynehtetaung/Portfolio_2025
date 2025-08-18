@@ -24,7 +24,7 @@ const SectionOne = () => {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Box sx={{ display: "flex", pt: "138px" }}>
+      <Box sx={{ display: "flex", pt: "138px", gap: "20px" }}>
         <Box sx={{ width: "70%" }}>
           <Typography
             sx={{
@@ -96,7 +96,7 @@ const SectionOne = () => {
         </Box>
         <Box sx={{ width: "30%" }}>
           <img
-            style={{ width: "440px", height: "464px" }}
+            style={{ width: "390px", height: "464px" }}
             src={profileImg}
             alt=""
           />
