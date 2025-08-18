@@ -130,7 +130,7 @@ const Nav = () => {
             },
           }}
         >
-          content
+          contact
         </Typography>
       </a>
     </Container>
