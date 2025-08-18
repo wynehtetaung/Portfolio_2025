@@ -2,9 +2,12 @@ import { Box, Container, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import ButtonResume from "../components/Button_resume";
 import aboutProfileImage from "../assets/images/profile_about.png";
-import { userData, skills } from "../store/store";
+import { userData, skills, education, experience } from "../store/store";
 import UserInfoCard from "../components/UserInfoCard";
 import Skill from "../components/Skill";
+import EducationStyle from "../components/EducationStyle";
+import ContactMe from "../sections/ContactMe";
+import Footer from "../components/Footer";
 
 const About = () => {
   console.log(userData);
@@ -86,7 +89,25 @@ const About = () => {
             ))}
           </Box>
         </Box>
+        <Box sx={{ display: "flex", gap: "100px", height: "100%" }}>
+          {/* experience section  */}
+          <Box sx={{ width: "50%", height: "100%" }}>
+            <EducationStyle information={education} />
+          </Box>
+          {/* middle line  */}
+          <Box sx={{ width: "1px", bgcolor: "#bababa" }}></Box>
+          {/* experience section  */}
+          <Box sx={{ width: "50%", height: "100%" }}>
+            <EducationStyle information={experience} />
+          </Box>
+        </Box>
       </Container>
+      <Box sx={{ bgcolor: "#000000" }}>
+        <Container maxWidth="lg">
+          <ContactMe />
+        </Container>
+        <Footer />
+      </Box>
     </Box>
   );
 };
