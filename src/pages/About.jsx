@@ -14,7 +14,7 @@ const About = () => {
   return (
     <Box>
       <Nav />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ mb: "70px" }}>
         <Box sx={{ mt: "45px", display: "flex", gap: "80px" }}>
           <Box sx={{ width: "50%" }}>
             <Typography
