@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import LOGO from "../assets/images/Freddie....png";
 import LOGO_BLACK from "../assets/images/Freddie... _black.png";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
+import AppNav from "./AppNav";
 const Nav = () => {
+  const isMobile = useMediaQuery("(max-width:768px)");
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { sub, id } = useParams();
@@ -16,8 +18,11 @@ const Nav = () => {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     latest > previous && latest > 160 ? setHidden(true) : setHidden(false);
+    console.log(latest);
   });
-  return (
+  return isMobile ? (
+    <AppNav />
+  ) : (
     <motion.nav
       variants={{
         visible: { y: 0 },
@@ -28,6 +33,8 @@ const Nav = () => {
       style={{
         position: "sticky",
         top: 0,
+        backdropFilter: "blur(5px) brightness(0.5)",
+        zIndex: 3,
       }}
     >
       <Container

@@ -24,15 +24,52 @@ const SectionOne = () => {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Box sx={{ display: "flex", pt: "138px", gap: "20px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xl: "row",
+            lg: "row",
+            md: "row",
+            sm: "row",
+            xs: "column",
+          },
+          pt: {
+            xl: "138px",
+            lg: "138px",
+            md: "60px",
+            sm: "50px",
+            xs: "138px",
+          },
+          gap: "20px",
+        }}
+      >
         <Box sx={{ width: "70%" }}>
           <Typography
             sx={{
-              width: { xl: "781px", lg: "730px" },
+              width: {
+                xl: "781px",
+                lg: "730px",
+                md: "600px",
+                sm: "480px",
+                xs: "323px",
+              },
               height: "auto",
-              fontSize: { xl: "64px", lg: "60px" },
+              fontSize: {
+                xl: "64px",
+                lg: "60px",
+                md: "50px",
+                sm: "40px",
+                xs: "32px",
+              },
               fontWeight: "bold",
-              color: { xl: "#ffffff", lg: "#ff0b" },
+              color: {
+                xl: "#fff",
+                lg: "#ff4",
+                md: "#ff0000",
+                sm: "#5500ff",
+                xs: "#334422",
+              },
             }}
           >
             More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
@@ -41,8 +78,14 @@ const SectionOne = () => {
           <Typography
             sx={{
               fontWeight: "regular",
-              width: "768px",
-              height: "96px",
+              width: {
+                xl: "768px",
+                lg: "768px",
+                md: "596px",
+                sm: "490px",
+                xs: "768px",
+              },
+              height: "auto",
               fontSize: "16px",
               lineHeight: "200%",
               color: "#a8a8a8",
@@ -54,53 +97,77 @@ const SectionOne = () => {
             multitasking. My expertise is to create web design, mobile design
             and many more...
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              borderRadius: "50px",
-              mt: "58px",
-              backgroundColor: "#FF0B55",
-            }}
-          >
-            <Typography sx={{ color: "#ffffff" }}>Fun Fact:</Typography>
-          </Button>
-          <Typography
-            sx={{
-              mt: "16px",
-              fontStyle: "italic",
-              color: "#a8a8a8",
-              fontSize: 16,
-              width: "737px",
-              height: "96px",
-              lineHeight: "200%",
-              position: "relative",
-            }}
-          >
-            Sometimes I create branding designs like a Graphic Designer. For
-            example, logo design, business card design and other things. This is
-            also my own work.{" "}
-            <span style={{ color: "#FF0B55" }}>
-              “So if you want a logo, you can ask me.”
-            </span>
-            <img
-              style={{
-                width: "18px",
-                height: "18px",
-                position: "absolute",
-                bottom: 8,
-                left: 120,
-              }}
-              src={heart}
-            />
-          </Typography>
         </Box>
         <Box sx={{ width: "30%" }}>
-          <img
-            style={{ width: "390px", height: "464px" }}
+          <Box
+            component={"img"}
             src={profileImg}
-            alt=""
-          />
+            sx={{
+              width: {
+                xl: "390px",
+                lg: "320px",
+                md: "245px",
+                sm: "200px",
+                xs: "320px",
+              },
+              height: {
+                xl: "464px",
+                lg: "394px",
+                md: "319px",
+                sm: "274px",
+                xs: "394px",
+              },
+            }}
+          ></Box>
         </Box>
+      </Box>
+      <Box>
+        <Button
+          variant="contained"
+          sx={{
+            borderRadius: "50px",
+            mt: "58px",
+            backgroundColor: "#FF0B55",
+          }}
+        >
+          <Typography sx={{ color: "#ffffff" }}>Fun Fact:</Typography>
+        </Button>
+        <Typography
+          sx={{
+            mt: "16px",
+            fontStyle: "italic",
+            color: "#a8a8a8",
+            fontSize: 16,
+            width: {
+              xl: "737px",
+              lg: "737px",
+              md: "737px",
+              sm: "auto",
+              xs: "auto",
+            },
+            height: "auto",
+            lineHeight: "200%",
+            position: "relative",
+            textWrap: "wrap",
+          }}
+        >
+          Sometimes I create branding designs like a Graphic Designer. For
+          example, logo design, business card design and other things. This is
+          also my own work.{" "}
+          <span style={{ color: "#FF0B55" }}>
+            “So if you want a logo, you can ask me.”
+          </span>
+          <img
+            style={{
+              width: "18px",
+              height: "18px",
+              position: "absolute",
+              bottom: 8,
+              left: 120,
+            }}
+            src={heart}
+          />
+        </Typography>
       </Box>
       <Box sx={{ mt: "50px", mb: "37px" }}>
         <SectionSlider slideData={slideData} />

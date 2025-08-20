@@ -12,7 +12,7 @@ import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
-import HoverCard from "../components/HoverCard";
+import HoverCard from "../components/HoverCard1";
 
 const Home = () => {
   const slideData = {
@@ -38,7 +38,7 @@ const Home = () => {
     height: 470,
     marginLeft: "20px",
     action: {
-      pause: false,
+      pause: true,
       hover: true,
       play: true,
       direction: "right",
@@ -48,7 +48,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Box sx={{ bgcolor: "#000000", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#000000" }}>
       <Nav />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         {/* section one */}
