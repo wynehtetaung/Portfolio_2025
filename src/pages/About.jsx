@@ -8,9 +8,12 @@ import Skill from "../components/Skill";
 import EducationStyle from "../components/EducationStyle";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const About = () => {
-  console.log(userData);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box>
       <Nav />

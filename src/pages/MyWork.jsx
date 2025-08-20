@@ -4,6 +4,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import { projectData } from "../store/store";
+import { useEffect } from "react";
 
 const MyWork = () => {
   const navigate = useNavigate();
@@ -11,6 +12,9 @@ const MyWork = () => {
   const { sub } = useParams();
 
   const filterData = projectData[sub];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box>

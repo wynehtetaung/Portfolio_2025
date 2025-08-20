@@ -6,16 +6,34 @@ import pj2 from "../assets/images/pj2.png";
 import pj3 from "../assets/images/pj3.png";
 import pj4 from "../assets/images/pj4.png";
 import upArrow from "../assets/images/arrow-up-right.png";
-import SectionSlider from "../components/SectionSlider";
 import SectionThree from "../sections/SectionThree";
 import SectionFour from "../sections/SectionFour";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import { useEffect } from "react";
+import HoverCard from "../components/HoverCard";
 
 const Home = () => {
   const slideData = {
-    image: [pj1, pj2, pj3, pj4],
+    image: [
+      {
+        title: "BINFO APPLICATION1",
+        img: pj1,
+      },
+      {
+        title: "BINFO APPLICATION",
+        img: pj2,
+      },
+      {
+        title: "BINFO APPLICATION3",
+        img: pj3,
+      },
+      {
+        title: "BINFO APPLICATION4",
+        img: pj4,
+      },
+    ],
     width: 470,
     height: 470,
     marginLeft: "20px",
@@ -26,6 +44,9 @@ const Home = () => {
       direction: "right",
     },
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box sx={{ bgcolor: "#000000" }}>
       <Nav />
@@ -42,7 +63,7 @@ const Home = () => {
         <Container maxWidth="lg">
           <SectionTwo />
         </Container>
-        <SectionSlider slideData={slideData} />
+        <HoverCard slideData={slideData} />
         <Box
           sx={{
             display: "flex",

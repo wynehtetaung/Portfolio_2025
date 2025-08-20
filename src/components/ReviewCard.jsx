@@ -13,12 +13,13 @@ const ReviewCard = ({ data }) => {
         <Box
           key={i}
           sx={{
+            flex: "1 1 0",
             width: "370px",
             height: "auto",
             border: "1px solid #B6B6B6",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
             borderRadius: "25px",
             gap: "40px",

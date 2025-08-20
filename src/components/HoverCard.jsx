@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Marquee from "react-fast-marquee";
 import UpArrowImage from "../assets/images/uparrowIcon.png";
 
-const SectionSlider = ({ slideData }) => {
+const HoverCard = ({ slideData }) => {
   return (
     <Marquee
       pauseOnHover={slideData.action.pause}
@@ -30,7 +30,7 @@ const SectionSlider = ({ slideData }) => {
               className="sliderImage"
               width={slideData.width}
               height={slideData.height}
-              src={data}
+              src={data.img}
               style={{
                 marginLeft: slideData.marginLeft,
                 objectFit: "cover",
@@ -82,4 +82,4 @@ const SectionSlider = ({ slideData }) => {
     </Marquee>
   );
 };
-export default SectionSlider;
+export default HoverCard;
