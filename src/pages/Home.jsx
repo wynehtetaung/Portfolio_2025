@@ -13,7 +13,6 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
 import HoverCard from "../components/HoverCard";
-import FAQ from "../components/test";
 
 const Home = () => {
   const slideData = {
@@ -49,7 +48,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Box sx={{ bgcolor: "#000000" }}>
+    <Box sx={{ bgcolor: "#000000", overflow: "hidden" }}>
       <Nav />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         {/* section one */}

@@ -28,11 +28,11 @@ const SectionOne = () => {
         <Box sx={{ width: "70%" }}>
           <Typography
             sx={{
-              width: "781px",
-              height: "192px",
-              fontSize: "64px",
+              width: { xl: "781px", lg: "730px" },
+              height: "auto",
+              fontSize: { xl: "64px", lg: "60px" },
               fontWeight: "bold",
-              color: "#ffffff",
+              color: { xl: "#ffffff", lg: "#ff0b" },
             }}
           >
             More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
