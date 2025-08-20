@@ -1,28 +1,44 @@
-import { Box, Divider, Typography } from "@mui/material";
-import plus from "../assets/images/plus.png";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Typography,
+} from "@mui/material";
+import { faqs } from "../store/store";
+import AddIcon from "@mui/icons-material/Add";
 
-const Question = ({ data }) => {
+const Question = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: "30px" }}>
-      {data.map((data, i) => (
-        <Box key={i}>
-          <Box
+      {faqs.map((faq, index) => (
+        <Accordion
+          key={index}
+          disableGutters
+          elevation={0}
+          sx={{
+            borderBottom: "1px solid #ddd",
+            "&:before": { display: "none" },
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<AddIcon sx={{ color: "#ff007f" }} />}
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              mb: "13px",
+              "& .MuiAccordionSummary-content": {
+                margin: 0,
+              },
             }}
           >
-            <Typography sx={{ fontSize: 20, fontWeight: 600 }}>
-              {data.question}
+            <Typography variant="h6" fontWeight="bold">
+              {faq.question}
             </Typography>
-            <Box sx={{ cursor: "pointer" }}>
-              <img src={plus} width={32} height={32} />
-            </Box>
-          </Box>
-          <Divider />
-        </Box>
+          </AccordionSummary>
+          <AccordionDetails sx={{ mb: "15px" }}>
+            <Typography variant="body1" color="text.secondary">
+              {faq.answer}
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       ))}
     </Box>
   );

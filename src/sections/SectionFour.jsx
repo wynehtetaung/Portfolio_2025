@@ -42,28 +42,6 @@ const SectionFour = () => {
     },
   ];
 
-  const questionData = [
-    {
-      question: "WHAT IS YOUR ROLE?",
-      answer: "",
-    },
-    {
-      question: "WHICH DESIGN TOOLS DO YOU USE?",
-      answer: "",
-    },
-    {
-      question: "Can I place a logo design order with you?",
-      answer: "",
-    },
-    {
-      question: "HOW DO YOU COLLABORATE WITH TEAMS?",
-      answer: "",
-    },
-    {
-      question: "HOW DO YOU BALANCE INNOVATION?",
-      answer: "",
-    },
-  ];
   return (
     <Box>
       <Typography
@@ -103,7 +81,7 @@ const SectionFour = () => {
         </Box>
         {/* Right  */}
         <Box sx={{ width: "58%" }}>
-          <Question data={questionData} />
+          <Question />
         </Box>
       </Box>
     </Box>

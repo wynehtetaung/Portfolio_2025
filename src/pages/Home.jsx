@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
 import HoverCard from "../components/HoverCard";
+import FAQ from "../components/test";
 
 const Home = () => {
   const slideData = {
