@@ -5,6 +5,7 @@ import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import { projectData } from "../store/store";
 import { useEffect } from "react";
+import HoverCard from "../components/HoverCard";
 
 const MyWork = () => {
   const navigate = useNavigate();
@@ -15,6 +16,10 @@ const MyWork = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const projectLocation = (id) => {
+    navigate(`/my-work/${sub}/${id}`);
+  };
 
   return (
     <Box>
@@ -140,12 +145,11 @@ const MyWork = () => {
           }}
         >
           {filterData.map((data, i) => (
-            <img
+            <HoverCard
               key={i}
-              src={data.image}
-              width={560}
-              height={470}
-              onClick={() => navigate(`/my-work/${sub}/${data.id}`)}
+              image={data.image}
+              title={data.title}
+              action={() => projectLocation(data.id)}
             />
           ))}
         </Box>

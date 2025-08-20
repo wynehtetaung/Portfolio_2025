@@ -14,11 +14,12 @@ const Nav = () => {
 
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+  const [checkBlur, setCheckBlur] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     latest > previous && latest > 160 ? setHidden(true) : setHidden(false);
-    console.log(latest);
+    latest > 0 ? setCheckBlur(true) : setCheckBlur(false);
   });
   return isMobile ? (
     <AppNav />
@@ -33,7 +34,7 @@ const Nav = () => {
       style={{
         position: "sticky",
         top: 0,
-        backdropFilter: "blur(5px) brightness(0.5)",
+        backdropFilter: checkBlur && "blur(5px) brightness(0.5)",
         zIndex: 3,
       }}
     >
@@ -66,6 +67,7 @@ const Nav = () => {
             sx={
               pathname === "/"
                 ? {
+                    fontWeight: 600,
                     position: "relative",
                     color: "#FF0B55",
                     ":before": {
@@ -96,6 +98,7 @@ const Nav = () => {
               pathname === `/my-work/${sub}` ||
               pathname === `/my-work/${sub}/${id}`
                 ? {
+                    fontWeight: 600,
                     position: "relative",
                     color: "#FF0B55",
                     ":before": {
@@ -124,6 +127,7 @@ const Nav = () => {
             sx={
               pathname === "/about"
                 ? {
+                    fontWeight: 600,
                     position: "relative",
                     color: "#FF0B55",
                     ":before": {

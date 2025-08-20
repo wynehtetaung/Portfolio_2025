@@ -52,38 +52,46 @@ The app also has a step count function, allowing users to connect their movement
     {
       id: 2,
       image: project3,
+      title: "BINFO Calorie Tracker",
     },
     {
       id: 3,
       image: project4,
+      title: "BINFO Calorie Tracker",
     },
   ],
   web: [
     {
       id: 1,
       image: project3,
+      title: "BINFO Calorie Tracker",
     },
     {
       id: 2,
       image: project2,
+      title: "BINFO Calorie Tracker",
     },
   ],
   design: [
     {
       id: 1,
       image: project1,
+      title: "BINFO Calorie Tracker",
     },
     {
       id: 2,
       image: project2,
+      title: "BINFO Calorie Tracker",
     },
     {
       id: 3,
       image: project3,
+      title: "BINFO Calorie Tracker",
     },
     {
       id: 4,
       image: project4,
+      title: "BINFO Calorie Tracker",
     },
   ],
 };

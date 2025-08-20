@@ -12,7 +12,7 @@ import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
-import HoverCard from "../components/HoverCard1";
+import SectionTwoSlide from "../components/SectionTwoSlide";
 
 const Home = () => {
   const slideData = {
@@ -34,12 +34,8 @@ const Home = () => {
         img: pj4,
       },
     ],
-    width: 470,
-    height: 470,
-    marginLeft: "20px",
     action: {
       pause: true,
-      hover: true,
       play: true,
       direction: "right",
     },
@@ -63,7 +59,7 @@ const Home = () => {
         <Container maxWidth="lg">
           <SectionTwo />
         </Container>
-        <HoverCard slideData={slideData} />
+        <SectionTwoSlide slideData={slideData} />
         <Box
           sx={{
             display: "flex",
