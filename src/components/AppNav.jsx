@@ -62,8 +62,8 @@ const AppNav = () => {
         <Box
           sx={{
             height: "100vh",
-            width: "90vw",
-            mx: "23px",
+            width: "100vw",
+            mx: "20px",
             mt: "35px",
           }}
         >
@@ -73,7 +73,7 @@ const AppNav = () => {
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box component={"img"} src={Logo} width={111} height={29} />
-            <IconButton>
+            <IconButton sx={{ mr: "25px" }}>
               <CloseIcon sx={{ width: 34, height: 34, color: "#ff0b55" }} />
             </IconButton>
           </Box>
