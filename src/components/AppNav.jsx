@@ -86,9 +86,6 @@ const AppNav = () => {
                 sx={{
                   fontSize: 25,
                   color: pathname === "/" ? "#ff0b55" : "#9e9e9e",
-                  ":hover": {
-                    color: "#ff0b55",
-                  },
                 }}
               >
                 HOME
@@ -104,9 +101,6 @@ const AppNav = () => {
                     pathname === `/my-work/${sub}/${id}`
                       ? "#ff0b55"
                       : "#9e9e9e",
-                  ":hover": {
-                    color: "#ff0b55",
-                  },
                 }}
               >
                 MY WORKS
@@ -118,9 +112,6 @@ const AppNav = () => {
                 sx={{
                   fontSize: 25,
                   color: pathname === "/about" ? "#ff0b55" : "#9e9e9e",
-                  ":hover": {
-                    color: "#ff0b55",
-                  },
                 }}
               >
                 ABOUT
@@ -131,9 +122,6 @@ const AppNav = () => {
                 sx={{
                   fontSize: 25,
                   color: pathname === "/contact" ? "#ff0b55" : "#9e9e9e",
-                  ":hover": {
-                    color: "#ff0b55",
-                  },
                 }}
               >
                 CONTACT
