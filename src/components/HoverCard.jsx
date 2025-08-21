@@ -11,7 +11,7 @@ const HoverCard = ({ image, title, action }) => {
           transform: "scale(1)",
         },
         "&:hover .sliderImage": {
-          filter: "blur(3px) brightness(0.7)",
+          filter: "blur(1px) brightness(0.7)",
         },
       }}
     >
@@ -20,7 +20,7 @@ const HoverCard = ({ image, title, action }) => {
         className="sliderImage"
         src={image}
         sx={{
-          marginLeft: "20px",
+          mx: "15px",
           objectFit: "cover",
           transition: "all 0.4s ease",
           width: { xl: 470, lg: 470, md: 400, sm: 300, xs: 200 },
@@ -46,10 +46,12 @@ const HoverCard = ({ image, title, action }) => {
       >
         <Typography
           sx={{
-            fontSize: 35,
+            fontSize: { xl: 35, lg: 35, md: 35, sm: 35, xs: 16 },
             fontWeight: "bold",
+            textWrap: "wrap",
+            textAlign: "center",
             color: "#ffffff",
-            mb: "29px",
+            mb: { xl: "29px", lg: "29px", md: "29px", sm: "29px", xs: "20px" },
           }}
         >
           {title}
@@ -58,8 +60,8 @@ const HoverCard = ({ image, title, action }) => {
           variant="text"
           sx={{
             overflow: "hidden",
-            width: 66,
-            height: 66,
+            width: { xl: 66, lg: 66, md: 66, sm: 66, xs: 40 },
+            height: { xl: 66, lg: 66, md: 66, sm: 66, xs: 40 },
             borderRadius: "50px",
           }}
         >
@@ -68,6 +70,10 @@ const HoverCard = ({ image, title, action }) => {
             src={UpArrowImage}
             width={66}
             height={66}
+            sx={{
+              width: { xl: 66, lg: 66, md: 66, sm: 66, xs: 40 },
+              height: { xl: 66, lg: 66, md: 66, sm: 66, xs: 40 },
+            }}
             onClick={action}
           />
         </Button>

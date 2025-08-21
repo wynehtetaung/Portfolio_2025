@@ -18,7 +18,7 @@ const Home = () => {
   const slideData = {
     image: [
       {
-        title: "BINFO APPLICATION1",
+        title: "BINFO APPLICATION1 APPLICATION1",
         img: pj1,
       },
       {
@@ -30,7 +30,7 @@ const Home = () => {
         img: pj3,
       },
       {
-        title: "BINFO APPLICATION4",
+        title: "BINFO APPLICATION",
         img: pj4,
       },
     ],
@@ -83,8 +83,8 @@ const Home = () => {
             sx={{
               mt: "35px",
               mb: "70px",
-              width: "200px",
-              height: "66px",
+              width: { xl: 200, lg: 200, md: 180, sm: 180, xs: 180 },
+              height: { xl: 63, lg: 63, md: 54, sm: 56, xs: 56 },
               borderRadius: "50px",
               backgroundColor: "#FF0B55",
             }}

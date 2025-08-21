@@ -23,7 +23,12 @@ const SectionOne = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -52,7 +57,7 @@ const SectionOne = () => {
                 lg: "730px",
                 md: "600px",
                 sm: "480px",
-                xs: "323px",
+                xs: "387px",
               },
               height: "auto",
               fontSize: {
@@ -109,8 +114,8 @@ const SectionOne = () => {
                 xl: "464px",
                 lg: "394px",
                 md: "319px",
-                sm: "274px",
-                xs: "324px",
+                sm: "250px",
+                xs: "300px",
               },
             }}
           ></Box>
@@ -125,7 +130,9 @@ const SectionOne = () => {
             backgroundColor: "#FF0B55",
           }}
         >
-          <Typography sx={{ color: "#ffffff" }}>Fun Fact:</Typography>
+          <Typography sx={{ color: "#ffffff", fontStyle: "italic" }}>
+            Fun Fact :
+          </Typography>
         </Button>
         <Typography
           sx={{
