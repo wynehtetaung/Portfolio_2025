@@ -49,7 +49,11 @@ const SectionOne = () => {
           gap: "20px",
         }}
       >
-        <Box sx={{ width: "70%" }}>
+        <Box
+          sx={{
+            width: { xl: "70%", lg: "70%", md: "70%", sm: "100%", xs: "100%" },
+          }}
+        >
           <Typography
             sx={{
               width: {
@@ -57,7 +61,7 @@ const SectionOne = () => {
                 lg: "730px",
                 md: "600px",
                 sm: "480px",
-                xs: "331px", //387
+                xs: "auto",
               },
               height: "auto",
               fontSize: {
@@ -65,16 +69,14 @@ const SectionOne = () => {
                 lg: "60px",
                 md: "50px",
                 sm: "40px",
-                xs: "32px",
+                xs: "30px",
               },
               fontWeight: "bold",
               color: "#ffffff",
-              whiteSpace: "pre-line",
             }}
           >
-            More than just{"  "}
-            <span style={{ color: "#FF0B55" }}>pixels</span> — I design with
-            creativity.
+            More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
+            design with creativity.
           </Typography>
           <Typography
             sx={{
