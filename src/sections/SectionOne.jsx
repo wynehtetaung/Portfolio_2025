@@ -57,7 +57,7 @@ const SectionOne = () => {
                 lg: "730px",
                 md: "600px",
                 sm: "480px",
-                xs: "387px",
+                xs: "331px", //387
               },
               height: "auto",
               fontSize: {
@@ -69,10 +69,12 @@ const SectionOne = () => {
               },
               fontWeight: "bold",
               color: "#ffffff",
+              whiteSpace: "pre-line",
             }}
           >
-            More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
-            design with creativity.
+            More than just{"  "}
+            <span style={{ color: "#FF0B55" }}>pixels</span> — I design with
+            creativity.
           </Typography>
           <Typography
             sx={{
