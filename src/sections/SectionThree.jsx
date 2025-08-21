@@ -67,6 +67,7 @@ const SectionThree = () => {
             sm: "wrap",
             xs: "wrap",
           },
+          // justifyContent: "center",
         }}
       >
         {cardData.map((data, i) => (

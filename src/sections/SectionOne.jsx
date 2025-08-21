@@ -85,8 +85,8 @@ const SectionOne = () => {
                 xl: "768px",
                 lg: "768px",
                 md: "596px",
-                sm: "490px",
-                xs: "300px",
+                sm: "auto",
+                xs: "auto",
               },
               height: "auto",
               fontSize: "16px",
@@ -102,7 +102,12 @@ const SectionOne = () => {
             and many more...
           </Typography>
         </Box>
-        <Box sx={{ width: "30%" }}>
+        <Box
+          sx={{
+            width: { xl: "30%", lg: "30%", md: "30%", sm: "100%", xs: "100%" },
+            textAlign: "center",
+          }}
+        >
           <Box
             component={"img"}
             src={profileImg}
@@ -143,7 +148,7 @@ const SectionOne = () => {
             mt: "16px",
             fontStyle: "italic",
             color: "#a8a8a8",
-            fontSize: 16,
+            fontSize: { xl: 16, lg: 16, md: 16, sm: 16, xs: 15 },
             width: {
               xl: "737px",
               lg: "737px",

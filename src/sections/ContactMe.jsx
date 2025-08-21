@@ -91,7 +91,7 @@ const ContactMe = () => {
               lg: "503px",
               md: "450px",
               sm: "380px",
-              xs: "288px",
+              xs: "auto",
             },
             height: "auto",
             lineHeight: "200%",

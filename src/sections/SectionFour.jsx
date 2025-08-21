@@ -79,7 +79,7 @@ const SectionFour = () => {
             sx={{
               minWidth: 320,
               height: "auto",
-              fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 40 },
+              fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 39 },
               fontWeight: "bold",
               color: "#000000",
             }}

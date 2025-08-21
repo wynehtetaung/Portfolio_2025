@@ -16,9 +16,9 @@ const ReviewCard = ({ data }) => {
             width: {
               xl: "370px",
               lg: "370px",
-              md: "370px",
-              sm: "370px",
-              xs: "285px",
+              md: "310px",
+              sm: "350px",
+              xs: "370px",
             },
             height: "auto",
             border: "1px solid #B6B6B6",
