@@ -14,11 +14,11 @@ const ReviewCard = ({ data }) => {
           key={i}
           sx={{
             width: {
-              xl: "370px",
-              lg: "370px",
-              md: "310px",
-              sm: "350px",
-              xs: "370px",
+              xl: 370,
+              lg: 370,
+              md: 310,
+              sm: 350,
+              xs: 400,
             },
             height: "auto",
             border: "1px solid #B6B6B6",

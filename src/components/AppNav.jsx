@@ -70,12 +70,12 @@ const AppNav = () => {
             height: "100vh",
             width: "100vw",
             mx: "20px",
-            mt: "35px",
+            mt: "6px",
           }}
         >
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box component={"img"} src={Logo} width={111} height={29} />
-            <IconButton sx={{ mr: "25px" }} onClick={() => handleDrawer(false)}>
+            <IconButton sx={{ mr: "33px" }} onClick={() => handleDrawer(false)}>
               <CloseIcon sx={{ width: 34, height: 34, color: "#ff0b55" }} />
             </IconButton>
           </Box>
