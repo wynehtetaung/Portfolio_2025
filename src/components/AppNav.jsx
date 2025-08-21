@@ -62,7 +62,7 @@ const AppNav = () => {
         <Box
           sx={{
             height: "100vh",
-            width: "100vw",
+            width: "90vw",
             mx: "23px",
             mt: "35px",
           }}
