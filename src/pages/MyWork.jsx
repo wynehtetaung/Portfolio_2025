@@ -71,7 +71,7 @@ const MyWork = () => {
                 cursor: "pointer",
               }}
             >
-              <Button
+              <Box
                 onClick={() => navigate("/my-work/app")}
                 variant={pathname === "/my-work/app" ? "contained" : "text"}
                 sx={
@@ -81,17 +81,23 @@ const MyWork = () => {
                         width: "170px",
                         height: "58px",
                         bgcolor: "#ff0b55",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                     : {
                         width: "170px",
                         height: "58px",
                         color: "#bababa",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                 }
               >
                 <Typography sx={{ fontSize: 14 }}>APP Design</Typography>
-              </Button>
-              <Button
+              </Box>
+              <Box
                 onClick={() => navigate("/my-work/web")}
                 variant={pathname === "/my-work/web" ? "contained" : "text"}
                 sx={
@@ -101,17 +107,23 @@ const MyWork = () => {
                         width: "170px",
                         height: "58px",
                         bgcolor: "#ff0b55",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                     : {
                         width: "170px",
                         height: "58px",
                         color: "#bababa",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                 }
               >
                 <Typography sx={{ fontSize: 14 }}>WEB Design</Typography>
-              </Button>
-              <Button
+              </Box>
+              <Box
                 onClick={() => navigate("/my-work/design")}
                 variant={pathname === "/my-work/design" ? "contained" : "text"}
                 sx={
@@ -121,16 +133,22 @@ const MyWork = () => {
                         width: "170px",
                         height: "58px",
                         bgcolor: "#ff0b55",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                     : {
                         width: "170px",
                         height: "58px",
                         color: "#bababa",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }
                 }
               >
                 <Typography sx={{ fontSize: 14 }}>LOGO Design</Typography>
-              </Button>
+              </Box>
             </Box>
           </Box>
         </Box>

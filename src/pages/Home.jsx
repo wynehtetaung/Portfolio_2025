@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
 import SectionTwoSlide from "../components/SectionTwoSlide";
+import SmoothScroll from "../components/SmoothScroll";
 
 const Home = () => {
   const slideData = {
@@ -56,6 +57,7 @@ const Home = () => {
         },
       }}
     >
+      <SmoothScroll />
       <Nav />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         {/* section one */}

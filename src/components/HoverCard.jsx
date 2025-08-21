@@ -23,8 +23,8 @@ const HoverCard = ({ image, title, action }) => {
           mx: "15px",
           objectFit: "cover",
           transition: "all 0.4s ease",
-          width: { xl: 470, lg: 470, md: 400, sm: 300, xs: 200 },
-          height: { xl: 470, lg: 470, md: 400, sm: 300, xs: 200 },
+          width: { xl: 470, lg: 470, md: 400, sm: 300, xs: 300 },
+          height: { xl: 470, lg: 470, md: 400, sm: 300, xs: 300 },
         }}
       />
       <Box
