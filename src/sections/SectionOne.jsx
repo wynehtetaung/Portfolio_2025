@@ -39,7 +39,7 @@ const SectionOne = () => {
             lg: "138px",
             md: "60px",
             sm: "50px",
-            xs: "138px",
+            xs: "50px",
           },
           gap: "20px",
         }}
@@ -63,13 +63,7 @@ const SectionOne = () => {
                 xs: "32px",
               },
               fontWeight: "bold",
-              color: {
-                xl: "#fff",
-                lg: "#ff4",
-                md: "#ff0000",
-                sm: "#5500ff",
-                xs: "#334422",
-              },
+              color: "#ffffff",
             }}
           >
             More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
@@ -77,17 +71,18 @@ const SectionOne = () => {
           </Typography>
           <Typography
             sx={{
-              fontWeight: "regular",
+              fontWeight: 400,
               width: {
                 xl: "768px",
                 lg: "768px",
                 md: "596px",
                 sm: "490px",
-                xs: "768px",
+                xs: "300px",
               },
               height: "auto",
               fontSize: "16px",
               lineHeight: "200%",
+              textWrap: "wrap",
               color: "#a8a8a8",
             }}
           >
@@ -108,14 +103,14 @@ const SectionOne = () => {
                 lg: "320px",
                 md: "245px",
                 sm: "200px",
-                xs: "320px",
+                xs: "250px",
               },
               height: {
                 xl: "464px",
                 lg: "394px",
                 md: "319px",
                 sm: "274px",
-                xs: "394px",
+                xs: "324px",
               },
             }}
           ></Box>
@@ -157,13 +152,13 @@ const SectionOne = () => {
           <span style={{ color: "#FF0B55" }}>
             “So if you want a logo, you can ask me.”
           </span>
-          <img
-            style={{
+          <Box
+            component={"img"}
+            sx={{
               width: "18px",
               height: "18px",
-              position: "absolute",
-              bottom: 8,
-              left: 120,
+              ml: "5px",
+              pt: "2px",
             }}
             src={heart}
           />

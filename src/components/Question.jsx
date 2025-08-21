@@ -10,7 +10,13 @@ import AddIcon from "@mui/icons-material/Add";
 
 const Question = () => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: "30px" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "30px",
+      }}
+    >
       {faqs.map((faq, index) => (
         <Accordion
           key={index}

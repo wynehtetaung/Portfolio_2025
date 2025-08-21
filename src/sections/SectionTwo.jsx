@@ -6,9 +6,9 @@ const SectionTwo = () => {
       <Typography
         sx={{
           fontWeight: "bold",
-          fontSize: 48,
+          fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 40 },
           color: "#000000",
-          pt: "58px",
+          pt: { xl: "58px", lg: "58px", md: "58px", sm: "58px", xs: "45px" },
         }}
       >
         Check out my <span style={{ color: "#FF0B55" }}>projects.</span>
@@ -17,7 +17,7 @@ const SectionTwo = () => {
         sx={{
           mt: "8px",
           color: "#505050",
-          fontSize: 16,
+          fontSize: { xl: 16, lg: 16, md: 16, sm: 16, xs: 14 },
           mb: "35px",
         }}
       >

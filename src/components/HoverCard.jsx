@@ -2,7 +2,6 @@ import { Box, Button, Typography } from "@mui/material";
 import UpArrowImage from "../assets/images/uparrowIcon.png";
 
 const HoverCard = ({ image, title, action }) => {
-  console.log(title);
   return (
     <Box
       sx={{
@@ -19,13 +18,13 @@ const HoverCard = ({ image, title, action }) => {
       <Box
         component={"img"}
         className="sliderImage"
-        width={470}
-        height={470}
         src={image}
         sx={{
           marginLeft: "20px",
           objectFit: "cover",
           transition: "all 0.4s ease",
+          width: { xl: 470, lg: 470, md: 400, sm: 300, xs: 200 },
+          height: { xl: 470, lg: 470, md: 400, sm: 300, xs: 200 },
         }}
       />
       <Box

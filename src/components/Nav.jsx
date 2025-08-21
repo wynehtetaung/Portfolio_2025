@@ -50,10 +50,11 @@ const Nav = () => {
           cursor: "pointer",
         }}
       >
-        <img
+        <Box
+          component={"img"}
           width={111}
           height={29}
-          srcSet={`${pathname === "/" ? LOGO : LOGO_BLACK} `}
+          src={`${pathname === "/" ? LOGO : LOGO_BLACK} `}
         />
         <Box
           sx={{

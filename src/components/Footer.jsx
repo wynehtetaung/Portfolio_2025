@@ -11,14 +11,34 @@ const Footer = () => {
       <Container
         maxWidth="lg"
         sx={{
-          py: "50px",
+          py: { xl: "50px", lg: "50px", md: "50px", sm: "50px", xs: "30px" },
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          height: {
+            xl: "auto",
+            lg: "auto",
+            md: "auto",
+            sm: "auto",
+            xs: "260px",
+          },
+          flexDirection: {
+            xl: "row",
+            lg: "row",
+            md: "row",
+            sm: "row",
+            xs: "column",
+          },
         }}
       >
         <img src={logoImage} width={111} height={29} />
-        <Typography sx={{ color: "#ffffff", fontSize: 16 }}>
+        <Typography
+          sx={{
+            color: "#ffffff",
+            fontSize: { xl: 16, lg: 16, md: 16, sm: 16, xs: 14 },
+            textAlign: "center",
+          }}
+        >
           Copyright © 2020. Freddie. All rights reserved.
         </Typography>
         <Box sx={{ display: "flex", gap: "32px", cursor: "pointer" }}>

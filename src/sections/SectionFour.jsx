@@ -45,19 +45,41 @@ const SectionFour = () => {
   return (
     <Box>
       <Typography
-        sx={{ pt: "70px", fontSize: 48, fontWeight: "bold", mb: "36px" }}
+        sx={{
+          pt: { xl: "70px", lg: "70px", md: "70px", sm: "70px", xs: "35px" },
+          fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 40 },
+          fontWeight: "bold",
+          mb: "36px",
+        }}
       >
         What people say <span style={{ color: "#FF0B55" }}>about me!</span>
       </Typography>
       <ReviewCard data={reviewCardData} />
-      <Box sx={{ mt: "70px", display: "flex", gap: "80px" }}>
+      <Box
+        sx={{
+          mt: "70px",
+          display: "flex",
+          gap: "80px",
+          flexWrap: {
+            xl: "nowrap",
+            lg: "nowrap",
+            md: "nowrap",
+            sm: "wrap",
+            xs: "wrap",
+          },
+        }}
+      >
         {/* Left  */}
-        <Box sx={{ width: "42%" }}>
+        <Box
+          sx={{
+            width: { xl: "42%", lg: "42%", md: "100%", sm: "100%", xs: "100%" },
+          }}
+        >
           <Typography
             sx={{
-              width: "412px",
-              height: "144px",
-              fontSize: 48,
+              minWidth: 320,
+              height: "auto",
+              fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 40 },
               fontWeight: "bold",
               color: "#000000",
             }}
@@ -68,8 +90,14 @@ const SectionFour = () => {
           <Typography
             sx={{
               mt: "10px",
-              fontSize: 16,
-              width: "400px",
+              fontSize: { xl: 16, lg: 16, md: 16, sm: 16, xs: 14 },
+              width: {
+                xl: "400px",
+                lg: "400px",
+                md: "400px",
+                sm: "400px",
+                xs: "300px",
+              },
               height: "64px",
               color: "#505050",
             }}
@@ -80,7 +108,12 @@ const SectionFour = () => {
           <ButtonResume />
         </Box>
         {/* Right  */}
-        <Box sx={{ width: "58%" }}>
+        <Box
+          sx={{
+            width: { xl: "58%", lg: "58%", md: "100%", sm: "100%", xs: "100%" },
+            mb: "50px",
+          }}
+        >
           <Question />
         </Box>
       </Box>

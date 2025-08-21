@@ -13,7 +13,13 @@ const ReviewCard = ({ data }) => {
         <Box
           key={i}
           sx={{
-            width: "370px",
+            width: {
+              xl: "370px",
+              lg: "370px",
+              md: "370px",
+              sm: "370px",
+              xs: "285px",
+            },
             height: "auto",
             border: "1px solid #B6B6B6",
             display: "flex",
@@ -22,16 +28,30 @@ const ReviewCard = ({ data }) => {
             alignItems: "center",
             borderRadius: "25px",
             gap: "40px",
+            p: {
+              xl: "0px",
+              lg: "0px",
+              md: "0px",
+              sm: "0px",
+              xs: "5px",
+            },
           }}
         >
           <Typography
             sx={{
-              width: "290px",
+              width: {
+                xl: "290px",
+                lg: "290px",
+                md: "290px",
+                sm: "290px",
+                xs: "275px",
+              },
               height: "auto",
               mt: "30px",
               color: "#575757",
               fontSize: 14,
               lineHeight: "200%",
+              textWrap: "wrap",
             }}
           >
             {data.content}

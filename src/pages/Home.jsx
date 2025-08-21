@@ -44,7 +44,18 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Box sx={{ bgcolor: "#000000" }}>
+    <Box
+      sx={{
+        bgcolor: "#000000",
+        overflow: {
+          xl: "visible",
+          lg: "visible",
+          md: "visible",
+          sm: "hidden",
+          xs: "hidden",
+        },
+      }}
+    >
       <Nav />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         {/* section one */}
