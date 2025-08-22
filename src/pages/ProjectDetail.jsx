@@ -10,6 +10,7 @@ import pj4 from "../assets/images/pj4.png";
 import SectionSlider from "../components/SectionSlider";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import SectionTwoSlide from "../components/SectionTwoSlide";
 
 const ProjectDetail = () => {
   const navigate = useNavigate();
@@ -17,13 +18,26 @@ const ProjectDetail = () => {
   const filterData = projectData[sub].find((data) => data.id == id);
   const checkData = filterData.project_name === undefined ? false : true;
   const slideData = {
-    image: [pj1, pj2, pj3, pj4],
-    width: 470,
-    height: 470,
-    marginLeft: "20px",
+    image: [
+      {
+        title: "BINFO APPLICATION1 APPLICATION1",
+        img: pj1,
+      },
+      {
+        title: "BINFO APPLICATION",
+        img: pj2,
+      },
+      {
+        title: "BINFO APPLICATION3",
+        img: pj3,
+      },
+      {
+        title: "BINFO APPLICATION",
+        img: pj4,
+      },
+    ],
     action: {
-      pause: false,
-      hover: true,
+      pause: true,
       play: true,
       direction: "right",
     },
@@ -32,7 +46,17 @@ const ProjectDetail = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Box>
+    <Box
+      sx={{
+        overflow: {
+          xl: "visible",
+          lg: "visible",
+          md: "visible",
+          sm: "hidden",
+          xs: "hidden",
+        },
+      }}
+    >
       <Nav />
       {checkData ? (
         <Container maxWidth="lg">
@@ -40,14 +64,42 @@ const ProjectDetail = () => {
             sx={{ mt: "70px", display: "flex", cursor: "pointer" }}
             onClick={() => navigate(-1)}
           >
-            <img src={leftArrow} width={24} height={24} alt="" />
+            <Box
+              component={"img"}
+              src={leftArrow}
+              sx={{ width: 24, height: 24 }}
+            />
             <Typography sx={{ fontSize: 16, color: "#000000" }}>
               Back
             </Typography>
           </Box>
           {/* first section  */}
-          <Box sx={{ mt: "41px", display: "flex", gap: "68px", mb: "51px" }}>
-            <Box sx={{ width: "55%" }}>
+          <Box
+            sx={{
+              mt: "41px",
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "row",
+                xs: "column",
+              },
+              gap: "30px",
+              mb: "51px",
+            }}
+          >
+            <Box
+              sx={{
+                width: {
+                  xl: "50%",
+                  lg: "50%",
+                  md: "50%",
+                  sm: "50%",
+                  xs: "100%",
+                },
+              }}
+            >
               <Typography
                 sx={{ color: "#FF0B55", fontSize: 16, fontStyle: "italic" }}
               >
@@ -67,16 +119,45 @@ const ProjectDetail = () => {
                 sx={{
                   color: "#575757",
                   fontSize: 16,
-                  width: "470px",
+                  width: "100%",
                   mt: "25px",
+                  textWrap: "wrap",
                   whiteSpace: "pre-line",
                 }}
               >
                 {filterData.content}
               </Typography>
             </Box>
-            <Box sx={{ width: "1px", bgcolor: "#BABABA" }}></Box>
-            <Box sx={{ width: "44%" }}>
+            <Box
+              sx={{
+                width: {
+                  xl: "1px",
+                  lg: "1px",
+                  md: "1px",
+                  sm: "1px",
+                  xs: "100%",
+                },
+                height: {
+                  xl: "auto",
+                  lg: "auto",
+                  md: "auto",
+                  sm: "auto",
+                  xs: "1px",
+                },
+                bgcolor: "#BABABA",
+              }}
+            ></Box>
+            <Box
+              sx={{
+                width: {
+                  xl: "50%",
+                  lg: "50%",
+                  md: "50%",
+                  sm: "50%",
+                  xs: "100%",
+                },
+              }}
+            >
               <Box sx={{ mb: "19px" }}>
                 <Typography
                   sx={{
@@ -154,7 +235,8 @@ const ProjectDetail = () => {
                 >
                   scope of work
                 </Typography>
-                <Typography
+                <Box
+                  component={"div"}
                   sx={{
                     fontSize: 16,
                     letterSpacing: 1,
@@ -163,6 +245,7 @@ const ProjectDetail = () => {
                   }}
                 >
                   <Box
+                    component={"div"}
                     sx={{
                       display: "flex",
                       gap: "10px",
@@ -172,6 +255,7 @@ const ProjectDetail = () => {
                   >
                     {filterData.scope_of_work.map((text, i) => (
                       <Box
+                        component={"div"}
                         key={i}
                         sx={{
                           bgcolor: "#efefef",
@@ -193,33 +277,67 @@ const ProjectDetail = () => {
                       </Box>
                     ))}
                   </Box>
-                </Typography>
+                </Box>
               </Box>
             </Box>
           </Box>
           {/* second section  */}
           <Box sx={{ mb: "59px" }}>
-            <img src={filterData.image_one} width={1170} height={534} />
+            <Box
+              component={"img"}
+              src={filterData.image_one}
+              sx={{
+                width: "100%",
+                height: { xl: 534, lg: 534, md: 440, sm: 325, xs: 180 },
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
           </Box>
           {/* section three  */}
-          <Box sx={{ display: "flex", gap: "109px", mb: "60px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "row",
+                xs: "column",
+              },
+              justifyContent: "space-between",
+              mb: "60px",
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 48,
                 color: "#000000",
                 fontWeight: "bold",
-                width: "30%",
+                width: {
+                  xl: "30%",
+                  lg: "30%",
+                  md: "30%",
+                  sm: "30%",
+                  xs: "100%",
+                },
               }}
             >
               How it <span style={{ color: "#ff0b33" }}>work</span>
             </Typography>
             <Typography
               sx={{
-                width: "70%",
+                width: {
+                  xl: "70%",
+                  lg: "70%",
+                  md: "70%",
+                  sm: "70%",
+                  xs: "100%",
+                },
                 fontSize: 16,
                 color: "#575757",
                 lineHeight: "200%",
-                letterSpacing: 1,
+                letterSpacing: 0.5,
                 whiteSpace: "pre-line",
               }}
             >
@@ -228,32 +346,84 @@ const ProjectDetail = () => {
           </Box>
           {/* section four  */}
           <Box sx={{ mb: "30px" }}>
-            <img src={filterData.image_two} width={1170} height={534} />
+            <Box
+              component={"img"}
+              src={filterData.image_two}
+              sx={{
+                width: "100%",
+                height: { xl: 534, lg: 534, md: 440, sm: 325, xs: 180 },
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
           </Box>
           {/* section five  */}
           <Box sx={{ display: "flex", gap: "30px", mb: "60px" }}>
             <Box sx={{ width: "50%" }}>
-              <img src={filterData.image_three} width={570} height={458} />
+              <Box
+                component={"img"}
+                src={filterData.image_three}
+                sx={{
+                  width: "100%",
+                  height: { xl: 458, lg: 458, md: 458, sm: 320, xs: 170 },
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
             </Box>
             <Box sx={{ width: "50%" }}>
-              <img src={filterData.image_four} width={570} height={458} />
+              <Box
+                component={"img"}
+                src={filterData.image_four}
+                sx={{
+                  width: "100%",
+                  height: { xl: 458, lg: 458, md: 458, sm: 320, xs: 170 },
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
             </Box>
           </Box>
           {/* section six  */}
-          <Box sx={{ display: "flex", gap: "86px", mb: "60px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "row",
+                xs: "column",
+              },
+              justifyContent: "space-between",
+              mb: "60px",
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 48,
                 color: "#000000",
                 fontWeight: "bold",
-                width: "40%",
+                width: {
+                  xl: "40%",
+                  lg: "40%",
+                  md: "40%",
+                  sm: "40%",
+                  xs: "100%",
+                },
               }}
             >
               User <span style={{ color: "#ff0b33" }}>journey:</span>
             </Typography>
             <Typography
               sx={{
-                width: "60%",
+                width: {
+                  xl: "60%",
+                  lg: "60%",
+                  md: "60%",
+                  sm: "60%",
+                  xs: "100%",
+                },
                 fontSize: 16,
                 color: "#575757",
                 lineHeight: "200%",
@@ -266,23 +436,57 @@ const ProjectDetail = () => {
           </Box>
           {/* section seven  */}
           <Box sx={{ mb: "60px" }}>
-            <img src={filterData.image_five} width={1170} height={534} />
+            <Box
+              component={"img"}
+              src={filterData.image_five}
+              sx={{
+                width: "100%",
+                height: { xl: 534, lg: 534, md: 440, sm: 325, xs: 180 },
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
           </Box>
           {/* section eight  */}
-          <Box sx={{ display: "flex", gap: "163px", mb: "60px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "row",
+                xs: "column",
+              },
+              justifyContent: "space-between",
+              mb: "60px",
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 48,
                 color: "#000000",
                 fontWeight: "bold",
-                width: "40%",
+                width: {
+                  xl: "40%",
+                  lg: "40%",
+                  md: "40%",
+                  sm: "40%",
+                  xs: "100%",
+                },
               }}
             >
               Solutions:
             </Typography>
             <Typography
               sx={{
-                width: "60%",
+                width: {
+                  xl: "60%",
+                  lg: "60%",
+                  md: "60%",
+                  sm: "60%",
+                  xs: "100%",
+                },
                 fontSize: 16,
                 color: "#575757",
                 lineHeight: "200%",
@@ -328,7 +532,7 @@ const ProjectDetail = () => {
             interfaces.
           </Typography>
         </Container>
-        <SectionSlider slideData={slideData} />
+        <SectionTwoSlide slideData={slideData} />
         <Box
           sx={{
             width: "auto",
