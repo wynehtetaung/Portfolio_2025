@@ -26,7 +26,10 @@ const AppNav = () => {
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ bgcolor: "transparent" }}>
+      <AppBar
+        position="static"
+        sx={{ bgcolor: "transparent", boxShadow: "none" }}
+      >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <IconButton>
             <Box

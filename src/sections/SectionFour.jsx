@@ -105,7 +105,26 @@ const SectionFour = () => {
             Got questions or need advice? Get clear insights to move forward.
           </Typography>
 
-          <ButtonResume />
+          <Box
+            sx={{
+              mt: {
+                xl: "87px",
+                lg: "87px",
+                md: "87px",
+                sm: "87px",
+                xs: "20px",
+              },
+              mb: {
+                xl: "70px",
+                lg: "70px",
+                md: "70px",
+                sm: "20px",
+                xs: "20px",
+              },
+            }}
+          >
+            <ButtonResume />
+          </Box>
         </Box>
         {/* Right  */}
         <Box
