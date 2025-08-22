@@ -54,7 +54,9 @@ const Nav = () => {
           component={"img"}
           width={111}
           height={29}
-          src={`${pathname === "/" ? LOGO : LOGO_BLACK} `}
+          src={`${
+            pathname === "/" || pathname === "/contact" ? LOGO : LOGO_BLACK
+          } `}
         />
         <Box
           sx={{

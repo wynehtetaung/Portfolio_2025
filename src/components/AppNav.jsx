@@ -34,7 +34,9 @@ const AppNav = () => {
           <IconButton>
             <Box
               component={img}
-              src={`${pathname === "/" ? Logo : LogoBlack} `}
+              src={`${
+                pathname === "/" || pathname === "/contact" ? Logo : LogoBlack
+              } `}
               width={111}
               height={29}
               sx={{
@@ -123,6 +125,7 @@ const AppNav = () => {
             </ListItem>
             <ListItem>
               <Typography
+                onClick={() => navigate("/contact")}
                 sx={{
                   fontSize: 25,
                   color: pathname === "/contact" ? "#ff0b55" : "#9e9e9e",

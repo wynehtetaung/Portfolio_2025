@@ -8,8 +8,8 @@ const SectionTwoSlide = ({ slideData }) => {
       play={slideData.action.play}
       direction={slideData.action.direction}
     >
-      {slideData.image.map((cardData) => (
-        <HoverCard image={cardData.img} title={cardData.title} />
+      {slideData.image.map((cardData, i) => (
+        <HoverCard key={i} image={cardData.img} title={cardData.title} />
       ))}
     </Marquee>
   );
