@@ -72,7 +72,7 @@ The app also has a step count function, allowing users to connect their movement
       title: "BINFO Calorie Tracker",
     },
   ],
-  design: [
+  logo: [
     {
       id: 1,
       image: project1,
@@ -231,5 +231,20 @@ export const faqs = [
     question: "HOW DO YOU BALANCE INNOVATION?",
     answer:
       "I balance innovation by combining research, creativity, and feedback from real users.",
+  },
+];
+
+export const projectNavData = [
+  {
+    path: "/my-work/app",
+    title: "App Design",
+  },
+  {
+    path: "/my-work/web",
+    title: "Web Design",
+  },
+  {
+    path: "/my-work/logo",
+    title: "Logo Design",
   },
 ];

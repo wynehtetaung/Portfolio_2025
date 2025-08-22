@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import Scrollbar from "smooth-scrollbar";
 
 const options = {
-  damping: 0.07,
+  damping: 0.04,
   thumbMinSize: 50,
-  renderByPixels: true,
+  renderByPixels: false,
   alwaysShowTracks: false,
   continuousScrolling: false,
 };

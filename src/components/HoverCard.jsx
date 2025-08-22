@@ -5,6 +5,7 @@ const HoverCard = ({ image, title, action }) => {
   return (
     <Box
       sx={{
+        mb: "15px",
         position: "relative",
         "&:hover .overlay": {
           opacity: 1,

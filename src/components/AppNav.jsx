@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import Logo from "../assets/images/Freddie....png";
+import LogoBlack from "../assets/images/Freddie... _black.png";
 import { img } from "framer-motion/client";
 import { useState } from "react";
 import { Close as CloseIcon } from "@mui/icons-material";
@@ -30,7 +31,7 @@ const AppNav = () => {
           <IconButton>
             <Box
               component={img}
-              src={Logo}
+              src={`${pathname === "/" ? Logo : LogoBlack} `}
               width={111}
               height={29}
               sx={{

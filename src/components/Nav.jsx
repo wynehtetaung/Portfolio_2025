@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import LOGO from "../assets/images/Freddie....png";
 import LOGO_BLACK from "../assets/images/Freddie... _black.png";
@@ -24,7 +23,8 @@ const Nav = () => {
   return isMobile ? (
     <AppNav />
   ) : (
-    <motion.nav
+    <Box
+      component={motion.div}
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },
@@ -153,22 +153,23 @@ const Nav = () => {
             about
           </Typography>
         </Box>
-        <a
+        {/* <a
           href="#contactMe"
           style={{ outline: "none", textDecoration: "none", color: "#bababa" }}
+        > */}
+        <Typography
+          onClick={() => navigate("/contact")}
+          sx={{
+            "&:hover": {
+              color: "#FF0B55",
+            },
+          }}
         >
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "#FF0B55",
-              },
-            }}
-          >
-            contact
-          </Typography>
-        </a>
+          contact
+        </Typography>
+        {/* </a> */}
       </Container>
-    </motion.nav>
+    </Box>
   );
 };
 export default Nav;
