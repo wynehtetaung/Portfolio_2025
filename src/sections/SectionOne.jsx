@@ -7,6 +7,7 @@ import slide3 from "../assets/images/logo_slide_3.png";
 import slide4 from "../assets/images/logo_slide_4.png";
 import slide5 from "../assets/images/logo_slide_5.png";
 import SectionSlider from "../components/SectionSlider";
+import { motion } from "framer-motion";
 
 const SectionOne = () => {
   const slideData = {
@@ -54,30 +55,38 @@ const SectionOne = () => {
             width: { xl: "70%", lg: "70%", md: "70%", sm: "100%", xs: "100%" },
           }}
         >
-          <Typography
-            sx={{
-              width: {
-                xl: "781px",
-                lg: "730px",
-                md: "600px",
-                sm: "480px",
-                xs: "auto",
-              },
-              height: "auto",
-              fontSize: {
-                xl: "64px",
-                lg: "60px",
-                md: "50px",
-                sm: "40px",
-                xs: "30px",
-              },
-              fontWeight: "bold",
-              color: "#ffffff",
-            }}
+          <Box
+            component={motion.div}
+            initial={{ y: -500 }} // start hidden
+            animate={{ y: 0 }} // fade in
+            // exit={{ opacity: 0 }} // fade out (when removed)
+            transition={{ type: "spring", stiffness: 500 }}
           >
-            More than just <span style={{ color: "#FF0B55" }}>pixels</span> — I
-            design with creativity.
-          </Typography>
+            <Typography
+              sx={{
+                width: {
+                  xl: "781px",
+                  lg: "730px",
+                  md: "600px",
+                  sm: "480px",
+                  xs: "auto",
+                },
+                height: "auto",
+                fontSize: {
+                  xl: "64px",
+                  lg: "60px",
+                  md: "50px",
+                  sm: "40px",
+                  xs: "30px",
+                },
+                fontWeight: "bold",
+                color: "#ffffff",
+              }}
+            >
+              More than just <span style={{ color: "#FF0B55" }}>pixels</span> —
+              I design with creativity.
+            </Typography>
+          </Box>
           <Typography
             sx={{
               fontWeight: 400,
