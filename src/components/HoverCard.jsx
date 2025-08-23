@@ -26,6 +26,7 @@ const HoverCard = ({ image, title, action }) => {
           transition: "all 0.4s ease",
           width: { xl: 470, lg: 470, md: 400, sm: 300, xs: 300 },
           height: { xl: 470, lg: 470, md: 400, sm: 300, xs: 300 },
+          borderRadius: "34px",
         }}
       />
       <Box
@@ -47,10 +48,11 @@ const HoverCard = ({ image, title, action }) => {
       >
         <Typography
           sx={{
-            fontSize: { xl: 35, lg: 35, md: 35, sm: 35, xs: 16 },
+            fontSize: { xl: 35, lg: 28, md: 28, sm: 28, xs: 16 },
             fontWeight: "bold",
             textWrap: "wrap",
             textAlign: "center",
+            textShadow: "2px 2px 2px rgba(0, 0, 0, 0.25)",
             color: "#ffffff",
             mb: { xl: "29px", lg: "29px", md: "29px", sm: "29px", xs: "20px" },
           }}

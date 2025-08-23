@@ -147,6 +147,7 @@ const MyWork = () => {
                           height: "100%",
                           bgcolor: "#ff0b55",
                           display: "flex",
+                          color: "#ffffff",
                           justifyContent: "center",
                           alignItems: "center",
                         }

@@ -62,8 +62,7 @@ const Card = ({ card }) => {
           sx={{
             mb: "66px",
             width: "100%",
-            // width: { xl: 370, lg: 370, md: 370, sm: 340, xs: 280 },
-            // height: { xl: 335, lg: 335, md: 335, sm: 305, xs: 255 },
+            borderRadius: "34px",
           }}
         />
       </Box>

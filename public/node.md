@@ -1,9 +1,2 @@
-slider hover
-slider logo size
-nav bar
-q and answer
-final section animation
-
-my work hover effect
-button အပေါ်တက်
-card slider အပေါ်တက်
+home slider သက်သက် ခွဲထားမယ်
+card borderRadius 34px

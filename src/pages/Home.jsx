@@ -13,8 +13,10 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
 import SectionTwoSlide from "../components/SectionTwoSlide";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const slideData = {
     image: [
       {
@@ -80,6 +82,7 @@ const Home = () => {
           }}
         >
           <Button
+            onClick={() => navigate("/my-work/app")}
             variant="contained"
             sx={{
               mt: "35px",
