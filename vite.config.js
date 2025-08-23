@@ -8,7 +8,6 @@ export default defineConfig({
     port: 4000,
     open: false,
     host: true,
-    // allowedHosts: "test-protfolio-l0q0.onrender.com",
   },
-  // base: "/",
+  base: "/",
 });
