@@ -10,4 +10,5 @@ export default defineConfig({
     host: true,
     // allowedHosts: "test-protfolio-l0q0.onrender.com",
   },
+  base: "/",
 });

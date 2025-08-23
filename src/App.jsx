@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Poppins"].join(","),
+    fontFamily: ["Poppins"],
   },
 });
 
