@@ -248,3 +248,8 @@ export const projectNavData = [
     title: "Logo Design",
   },
 ];
+
+export const resume = {
+  name: "Alice",
+  file: project1,
+};
