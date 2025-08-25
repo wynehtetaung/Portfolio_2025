@@ -6,6 +6,7 @@ import MyWork from "./pages/MyWork";
 import ProjectDetail from "./pages/ProjectDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Dashboard from "./admin/page/Dashboard";
 
 const theme = createTheme({
   typography: {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         Component: Contact,
       },
     ],
+  },
+  {
+    path: "/:key/dashboard",
+    Component: Dashboard,
   },
 ]);
 const App = () => {

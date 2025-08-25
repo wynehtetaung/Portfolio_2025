@@ -1,0 +1,15 @@
+import { Box, Button, Typography } from "@mui/material";
+
+const SaveButton = () => {
+  return (
+    <Box sx={{ width: 273, height: 55, borderRadius: "10px" }}>
+      <Button
+        variant="contained"
+        sx={{ width: "100%", height: "100%", bgcolor: "#9747FF" }}
+      >
+        <Typography>Save</Typography>
+      </Button>
+    </Box>
+  );
+};
+export default SaveButton;
