@@ -155,10 +155,6 @@ const Nav = () => {
             about
           </Typography>
         </Box>
-        {/* <a
-          href="#contactMe"
-          style={{ outline: "none", textDecoration: "none", color: "#bababa" }}
-        > */}
         <Typography
           onClick={() => navigate("/contact")}
           sx={{

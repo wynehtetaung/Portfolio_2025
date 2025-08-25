@@ -6,9 +6,14 @@ import {
   Typography,
 } from "@mui/material";
 import { faqs } from "../store/store";
-import AddIcon from "@mui/icons-material/Add";
+import { Remove as RemoveIcon, Add as AddIcon } from "@mui/icons-material";
+import { useState } from "react";
 
 const Question = () => {
+  const [expanded, setExpanded] = useState(null);
+  const handleChange = (id) => (event, isExpanded) => {
+    setExpanded(isExpanded ? id : null); // only one open at a time
+  };
   return (
     <Box
       sx={{
@@ -17,18 +22,26 @@ const Question = () => {
         gap: "30px",
       }}
     >
-      {faqs.map((faq, index) => (
+      {faqs.map((faq) => (
         <Accordion
-          key={index}
+          key={faq.id}
           disableGutters
           elevation={0}
+          expanded={expanded === faq.id}
+          onChange={handleChange(faq.id)}
           sx={{
             borderBottom: "1px solid #ddd",
             "&:before": { display: "none" },
           }}
         >
           <AccordionSummary
-            expandIcon={<AddIcon sx={{ color: "#ff007f" }} />}
+            expandIcon={
+              expanded === faq.id ? (
+                <RemoveIcon sx={{ color: "#ff007f" }} />
+              ) : (
+                <AddIcon sx={{ color: "#ff007f" }} />
+              )
+            }
             sx={{
               "& .MuiAccordionSummary-content": {
                 margin: 0,
@@ -40,9 +53,7 @@ const Question = () => {
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ mb: "15px" }}>
-            <Typography variant="body1" color="text.secondary">
-              {faq.answer}
-            </Typography>
+            <Typography>{faq.answer}</Typography>
           </AccordionDetails>
         </Accordion>
       ))}
