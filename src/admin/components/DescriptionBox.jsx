@@ -1,10 +1,12 @@
 import { Box, TextField, Typography } from "@mui/material";
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
 
 const DescriptionBox = ({ title, setDes }) => {
+  const dispatch = useDispatch();
   const inputRef = useRef(null);
   const handleChange = () => {
-    setDes(inputRef.current.value);
+    dispatch(setDes(inputRef.current.value));
   };
   return (
     <Box>

@@ -1,15 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import UploadImageIcon from "../icons/upload_image.svg";
 import { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 
 const ImageUpload = ({ title, setTempStore, backgroundColor }) => {
+  const dispatch = useDispatch();
   const inputRef = useRef(null);
   const [preview, setPreview] = useState(null);
   const handleChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       setPreview(URL.createObjectURL(file));
-      setTempStore(file);
+      dispatch(setTempStore(file.name));
     }
   };
   return (
@@ -28,6 +30,8 @@ const ImageUpload = ({ title, setTempStore, backgroundColor }) => {
           alignItems: "center",
           cursor: "pointer",
           userSelect: "none",
+          px: "20px",
+          py: "90px",
         }}
         onClick={() => inputRef.current.click()}
       >
@@ -36,9 +40,8 @@ const ImageUpload = ({ title, setTempStore, backgroundColor }) => {
             component={"img"}
             sx={{
               maxWidth: "100%",
-              maxheight: "100%",
+              minHight: "100%",
               objectFit: "cover",
-              borderRadius: "10px",
             }}
             src={preview}
           />

@@ -1,6 +1,13 @@
 import { Box, Input } from "@mui/material";
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
 
-const InputBox = ({ icon }) => {
+const InputLink = ({ icon, setInput }) => {
+  const dispatch = useDispatch();
+  const inputRef = useRef(null);
+  const handleChange = () => {
+    if (inputRef.current.value) dispatch(setInput(inputRef.current.value));
+  };
   return (
     <Box
       sx={{
@@ -24,8 +31,10 @@ const InputBox = ({ icon }) => {
       />
       <Input
         placeholder="Link..."
+        inputRef={inputRef}
         type="text"
         disableUnderline
+        onChange={handleChange}
         sx={{
           outline: "none",
         }}
@@ -33,4 +42,4 @@ const InputBox = ({ icon }) => {
     </Box>
   );
 };
-export default InputBox;
+export default InputLink;
