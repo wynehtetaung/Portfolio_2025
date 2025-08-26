@@ -7,6 +7,11 @@ import ProjectDetail from "./pages/ProjectDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Dashboard from "./admin/page/Dashboard";
+import AdminHome from "./admin/page/AdminHome";
+import AdminLayout from "./admin/AdminLayout";
+import AdminMyWork from "./admin/page/AdminMyWork";
+import AdminAbout from "./admin/page/AdminAbout";
+import AdminContact from "./admin/page/AdminContact";
 
 const theme = createTheme({
   typography: {
@@ -47,7 +52,29 @@ const router = createBrowserRouter([
   },
   {
     path: "/:key/dashboard",
-    Component: Dashboard,
+    Component: AdminLayout,
+    children: [
+      {
+        path: "/:key/dashboard",
+        Component: Dashboard,
+      },
+      {
+        path: "home",
+        Component: AdminHome,
+      },
+      {
+        path: "my-works",
+        Component: AdminMyWork,
+      },
+      {
+        path: "about",
+        Component: AdminAbout,
+      },
+      {
+        path: "contact",
+        Component: AdminContact,
+      },
+    ],
   },
 ]);
 const App = () => {

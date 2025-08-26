@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { navData } from "../util/admin_store";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -26,6 +27,7 @@ const Nav = () => {
             mb: "37px",
             width: 166,
             height: 48,
+            userSelect: "none",
           }}
         />
         {/* menu item list  */}
@@ -44,6 +46,10 @@ const Nav = () => {
                 alignItems: "center",
                 bgcolor: pathname === item.route ? "#9747FF" : "none",
                 color: pathname === item.route ? "#ffffff" : "#929292",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                navigate(item.route);
               }}
             >
               <Box
