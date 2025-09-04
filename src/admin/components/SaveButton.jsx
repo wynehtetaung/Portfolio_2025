@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 
 const SaveButton = ({ type }) => {
   return (
-    <Box sx={{ width: 273, height: 55, borderRadius: "10px" }}>
+    <Box sx={{ width: 273, height: 55, borderRadius: "10px", mb: "20px" }}>
       <Button
         type={type}
         variant="contained"

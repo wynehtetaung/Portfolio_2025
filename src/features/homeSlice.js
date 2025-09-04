@@ -7,7 +7,7 @@ const homeSlice = createSlice({
     heroTitle: null,
     description: null,
     funFact: null,
-    sliderImages: [],
+    sliderImages: null,
     checkOutDescription: null,
     serviceDescription: null,
     services: [],
