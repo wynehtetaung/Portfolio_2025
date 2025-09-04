@@ -1,6 +1,6 @@
 import { Box, Input } from "@mui/material";
 
-const InputBox = ({ type, color, placeholder }) => {
+const InputBox = ({ type, color, placeholder, setTemp }) => {
   return (
     <Box
       sx={{
@@ -16,6 +16,7 @@ const InputBox = ({ type, color, placeholder }) => {
         type={type}
         sx={{ p: "14px", color: color }}
         placeholder={placeholder}
+        onChange={(e) => setTemp(e.target.value)}
       />
     </Box>
   );

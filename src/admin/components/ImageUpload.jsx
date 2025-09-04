@@ -32,6 +32,8 @@ const ImageUpload = ({ title, setTempStore, backgroundColor }) => {
           userSelect: "none",
           px: "20px",
           py: "90px",
+
+          "&:hover": { backgroundColor: "#f3e8ff" },
         }}
         onClick={() => inputRef.current.click()}
       >
