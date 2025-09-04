@@ -2,10 +2,14 @@ import { useRef, useState } from "react";
 import { Box, Typography, Grid, IconButton, Button } from "@mui/material";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch } from "react-redux";
 
 export default function MultiImageUploadBox({ setTemp }) {
+  const dispatch = useDispatch();
   const inputRef = useRef(null);
   const [images, setImages] = useState([]);
+  const [check, setCheck] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const handleClick = () => {
     inputRef.current.click();
@@ -25,6 +29,16 @@ export default function MultiImageUploadBox({ setTemp }) {
     setImages((prev) => prev.filter((img) => img.id !== id));
   };
 
+  const handleSave = () => {
+    if (images.length > 0) {
+      const image = images.map((img) => img.url);
+      dispatch(setTemp(image));
+      setCheck(true);
+      setErrorMsg(null);
+    } else {
+      setErrorMsg("required!");
+    }
+  };
   return (
     <Box>
       <Box
@@ -57,10 +71,9 @@ export default function MultiImageUploadBox({ setTemp }) {
           </Box>
         ) : (
           <Grid container spacing={2}>
-            {images.map((img, i) => (
-              <Grid item xs={6} sm={4} md={3} key={img.id}>
+            {images.map((img) => (
+              <Grid key={img.id}>
                 <Box
-                  key={i}
                   sx={{
                     position: "relative",
                     border: "1px solid #ddd",
@@ -118,10 +131,19 @@ export default function MultiImageUploadBox({ setTemp }) {
       <Box sx={{ display: "flex", justifyContent: "end", mt: "10px" }}>
         <Typography sx={{ color: "#676767" }}>{images.length}/12</Typography>
       </Box>
+      {errorMsg && (
+        <Typography sx={{ color: "#f56969", fontSize: 14 }}>
+          {errorMsg}
+        </Typography>
+      )}
       <Button
-        onClick={() => setTemp(images)}
+        onClick={handleSave}
         variant="text"
-        sx={{ mt: "20px", mb: "30px" }}
+        sx={
+          check
+            ? { color: "#1af313ff", bgcolor: "#9747ff", mt: "20px", mb: "30px" }
+            : { color: "#9747ff", mt: "20px", mb: "30px" }
+        }
       >
         save
       </Button>

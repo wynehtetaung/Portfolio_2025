@@ -347,7 +347,11 @@ const AdminHome = () => {
               />
             </Box>
             <Box sx={{ mt: "29px" }}>
-              <ImageUpload title={"Image :"} setTempStore={setServiceImg} />
+              <ImageUpload
+                title={"Image :"}
+                backgroundColor={`#ffffff`}
+                setTempStore={setServiceImg}
+              />
             </Box>
             {services.length > 0 && (
               <Typography sx={{ color: "#676767", fontSize: 14, mt: "10px" }}>
