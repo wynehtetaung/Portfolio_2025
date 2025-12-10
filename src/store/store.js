@@ -9,7 +9,7 @@ export const projectData = {
   app: [
     {
       id: 1,
-      project_name: "Binfo Track & Train",
+      project_name: "Binfo Track & Trains",
       title: "BINFO Calorie Tracker",
       image: project1,
       content: `Binfo is a modern and user-friendly mobile application designed to help people take control of their health and fitness journey. With a focus on simplicity and accuracy, the app allows users to track their daily calorie intake, monitor nutritional values, and set personalized fitness goals.
