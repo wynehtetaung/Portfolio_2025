@@ -17,6 +17,7 @@ const ProjectDetail = () => {
   const { id, sub } = useParams();
   const filterData = projectData[sub].find((data) => data.id == id);
   const checkData = filterData.project_name === undefined ? false : true;
+  console.log(checkData);
   const slideData = {
     image: [
       {
