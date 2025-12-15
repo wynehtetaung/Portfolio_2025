@@ -1,9 +1,15 @@
 import { Box, Typography } from "@mui/material";
+import { motion } from 'framer-motion';
+
 
 const SectionTwo = () => {
   return (
     <Box>
       <Typography
+            component={motion.p}
+            whileInView={{opacity : 1,x:0}}
+            initial = {{opacity: 0,x:-100}}
+            transition={{ type: "spring", stiffness: 20 }}
         sx={{
           fontWeight: "bold",
           fontSize: { xl: 48, lg: 48, md: 48, sm: 40, xs: 33 },
@@ -15,6 +21,10 @@ const SectionTwo = () => {
         Check out my <span style={{ color: "#FF0B55" }}>projects.</span>
       </Typography>
       <Typography
+      component={motion.p}
+            whileInView={{opacity : 1,x:0}}
+            initial = {{opacity: 0,x:100}}
+            transition={{ type: "spring", stiffness: 20 }}
         sx={{
           mt: "8px",
           color: "#505050",

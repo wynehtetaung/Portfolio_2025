@@ -41,10 +41,10 @@ const SectionOne = () => {
         >
           <Box
             component={motion.div}
-            initial={{ y: -500 }} // start hidden
-            animate={{ y: 0 }} // fade in
+            whileInView={{y:0}}
+            initial={{ y: -50 }} // start hidden
             // exit={{ opacity: 0 }} // fade out (when removed)
-            transition={{ type: "spring", stiffness: 500 }}
+            transition={{ type: "spring", stiffness: 30 }}
           >
             <Typography
               sx={{
@@ -72,6 +72,11 @@ const SectionOne = () => {
             </Typography>
           </Box>
           <Typography
+          component={motion.p}
+             whileInView={{y:0}}
+            initial={{ y: 80 }}// fade in
+            // exit={{ opacity: 0 }} // fade out (when removed)
+            transition={{ type: "spring", stiffness: 20 }}
             sx={{
               fontWeight: 400,
               width: {
@@ -102,7 +107,11 @@ const SectionOne = () => {
           }}
         >
           <Box
-            component={"img"}
+           component={motion.img}
+             whileInView={{x:0}}
+            initial={{ x: 100 }}
+            // exit={{ opacity: 0 }} // fade out (when removed)
+            transition={{ type: "spring", stiffness: 20 }}
             src={profileImg}
             sx={{
               width: {
@@ -125,6 +134,11 @@ const SectionOne = () => {
       </Box>
       <Box>
         <Button
+           component={motion.button}
+             whileInView={{y:0}}
+            initial={{ y: -100 }}
+            // exit={{ opacity: 0 }} // fade out (when removed)
+            transition={{ type: "spring", stiffness: 20 }}
           variant="contained"
           sx={{
             borderRadius: "50px",
@@ -137,6 +151,10 @@ const SectionOne = () => {
           </Typography>
         </Button>
         <Typography
+            component={motion.p}
+            whileInView={{x:0}}
+            initial={{ x: -100 }}
+            transition={{ type: "spring", stiffness: 20 }}
           sx={{
             mt: "16px",
             fontStyle: "italic",

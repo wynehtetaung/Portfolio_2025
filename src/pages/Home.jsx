@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import SectionTwoSlide from "../components/ProjectSlider";
 import { useNavigate } from "react-router-dom";
 import { projectData } from '../store/projectData.store';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -60,6 +61,10 @@ const Home = () => {
           }}
         >
           <Button
+            component={motion.Button}
+            whileInView={{y:0}}
+            initial={{ y: 100 }}
+            transition={{ type: "spring", stiffness: 20 }}
             onClick={() => navigate("/my-work/app")}
             variant="contained"
             sx={{
