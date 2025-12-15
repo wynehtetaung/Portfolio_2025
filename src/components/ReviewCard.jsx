@@ -62,6 +62,13 @@ const ReviewCard = ({ data }) => {
               alignItems: "center",
               gap: "10px",
               mb: "30px",
+              width: {
+                xl: "290px",
+                lg: "290px",
+                md: "290px",
+                sm: "290px",
+                xs: "275px",
+              },
             }}
           >
             <Avatar src={data.avatar} />
