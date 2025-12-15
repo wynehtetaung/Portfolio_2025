@@ -1,9 +1,9 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
-import { projectData, projectNavData } from "../store/store";
+import { projectData,projectNavData} from "../store/projectData.store";
 import { useEffect } from "react";
 import HoverCard from "../components/HoverCard";
 
@@ -12,7 +12,7 @@ const MyWork = () => {
   const { pathname } = useLocation();
   const { sub } = useParams();
 
-  const filterData = projectData[sub];
+  const filterData = projectData.filter(data => data.type === sub)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

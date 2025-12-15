@@ -2,47 +2,18 @@ import { Box, Container, Divider, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import leftArrow from "../assets/images/chevron-left.png";
 import { useNavigate, useParams } from "react-router-dom";
-import { projectData } from "../store/store";
-import pj1 from "../assets/images/pj1.png";
-import pj2 from "../assets/images/pj2.png";
-import pj3 from "../assets/images/pj3.png";
-import pj4 from "../assets/images/pj4.png";
-import SectionSlider from "../components/SectionSlider";
+import { projectData } from "../store/projectData.store";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import SectionTwoSlide from "../components/SectionTwoSlide";
+import SectionTwoSlide from "../components/ProjectSlider";
 
 const ProjectDetail = () => {
   const navigate = useNavigate();
   const { id, sub } = useParams();
-  const filterData = projectData[sub].find((data) => data.id == id);
+  const filterData = projectData.find(data => data.type == sub && data.id == id);
+  console.log(filterData);
   const checkData = filterData.project_name === undefined ? false : true;
-  console.log(checkData);
-  const slideData = {
-    image: [
-      {
-        title: "BINFO APPLICATION1 APPLICATION1",
-        img: pj1,
-      },
-      {
-        title: "BINFO APPLICATION",
-        img: pj2,
-      },
-      {
-        title: "BINFO APPLICATION3",
-        img: pj3,
-      },
-      {
-        title: "BINFO APPLICATION",
-        img: pj4,
-      },
-    ],
-    action: {
-      pause: true,
-      play: true,
-      direction: "right",
-    },
-  };
+  const sliderData = projectData.filter(data => data.slider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -243,6 +214,7 @@ const ProjectDetail = () => {
                     letterSpacing: 1,
                     color: "#575757",
                     mb: "19px",
+                    mt:"10px"
                   }}
                 >
                   <Box
@@ -250,7 +222,7 @@ const ProjectDetail = () => {
                     sx={{
                       display: "flex",
                       gap: "10px",
-                      justifyContent: "space-evenly",
+                      justifyContent: "start",
                       alignItems: "center",
                     }}
                   >
@@ -533,7 +505,7 @@ const ProjectDetail = () => {
             interfaces.
           </Typography>
         </Container>
-        <SectionTwoSlide slideData={slideData} />
+        <SectionTwoSlide slideData={sliderData} />
         <Box
           sx={{
             width: "auto",

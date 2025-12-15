@@ -5,7 +5,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { faqs } from "../store/store";
+import { faqs } from "../store/faqs.store";
 import { Remove as RemoveIcon, Add as AddIcon } from "@mui/icons-material";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import { Box, Button, Input, TextField, Typography } from "@mui/material";
-import Logo from "../assets/images/Freddie....png";
+import Logo from "../assets/images/Logo/Logo-white.svg";
 
 const ContactMe = () => {
   return (
@@ -52,7 +52,7 @@ const ContactMe = () => {
               mt: "10px",
             }}
           >
-            <span style={{ color: "#ff0b55" }}>+959</span> 784495484
+            <span style={{ color: "#ff0b55" }}>+959</span> 757359906
           </Typography>
         </Box>
         <Box>

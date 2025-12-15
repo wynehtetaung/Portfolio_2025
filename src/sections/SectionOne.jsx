@@ -1,27 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import profileImg from "../assets/images/profile.png";
 import heart from "../assets/images/fluent-emoji_white-heart.png";
-import slide1 from "../assets/images/logo_slide_1.png";
-import slide2 from "../assets/images/logo_slide_2.png";
-import slide3 from "../assets/images/logo_slide_3.png";
-import slide4 from "../assets/images/logo_slide_4.png";
-import slide5 from "../assets/images/logo_slide_5.png";
-import SectionSlider from "../components/SectionSlider";
+import LogoSlider from "../components/LogoSlider";
+import {logoSliderData} from '../store/logoSlider.store';
 import { motion } from "framer-motion";
 
 const SectionOne = () => {
-  const slideData = {
-    image: [slide1, slide2, slide3, slide4, slide5],
-    width: 128,
-    height: 65,
-    marginLeft: "150px",
-    action: {
-      pause: true,
-      hover: false,
-      play: true,
-      direction: "left",
-    },
-  };
 
   return (
     <Box
@@ -190,7 +174,7 @@ const SectionOne = () => {
         </Typography>
       </Box>
       <Box sx={{ mt: "50px", mb: "37px" }}>
-        <SectionSlider slideData={slideData} />
+        <LogoSlider slideData={logoSliderData} />
       </Box>
     </Box>
   );

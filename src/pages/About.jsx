@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import ButtonResume from "../components/Button_resume";
 import aboutProfileImage from "../assets/images/profile_about.png";
-import { userData, skills, education, experience } from "../store/store";
+import { userData, skills, education, experience } from "../store/aboutData.store";
 import UserInfoCard from "../components/UserInfoCard";
 import Skill from "../components/Skill";
 import EducationStyle from "../components/EducationStyle";

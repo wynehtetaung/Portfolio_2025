@@ -1,5 +1,5 @@
 import { Box, Container, Divider, Typography } from "@mui/material";
-import logoImage from "../assets/images/Freddie....png";
+import logoImage from "../assets/images/Logo/Logo-white.svg";
 import facebookImage from "../assets/images/facebook.png";
 import instagramImage from "../assets/images/instagram.png";
 import linkedinImage from "../assets/images/linkedin.png";

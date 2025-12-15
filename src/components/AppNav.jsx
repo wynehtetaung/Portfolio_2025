@@ -9,8 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
-import Logo from "../assets/images/Freddie....png";
-import LogoBlack from "../assets/images/Freddie... _black.png";
+import Logo from "../assets/images/Logo/Logo-white.svg";
+import LogoBlack from "../assets/images/Logo/Logo-black.svg";
 import { img } from "framer-motion/client";
 import { useState } from "react";
 import { Close as CloseIcon } from "@mui/icons-material";

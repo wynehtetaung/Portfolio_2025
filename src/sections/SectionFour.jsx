@@ -1,46 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ReviewCard from "../components/ReviewCard";
-import avatarImage from "../assets/images/avatar.jpeg";
 import Question from "../components/Question";
 import ButtonResume from "../components/Button_resume";
+import { reviewCardData } from '../store/reviewData.store';
 
 const SectionFour = () => {
-  const reviewCardData = [
-    {
-      name: "Aye Chan Min (Eric)",
-      position: "CEO of ABCD Co.,Ltd.",
-      avatar: avatarImage,
-      content: `“His UI/UX design skills transformed our app into a user-friendly,
-        visually appealing experience. They listened carefully to our needs and
-        delivered a seamless, intuitive design that truly improved our product.
-        Highly professional and easy to collaborate with — I’d definitely
-        recommend them for any design project.”`,
-    },
-    {
-      name: "Kaung Myat Cho",
-      position: "Backend Developer @ Earthlike",
-      avatar: avatarImage,
-      content: `“Freddie has been an invaluable asset to our design team. Their expertise in UI/UX design consistently elevates our products by creating.”`,
-    },
-    {
-      name: "Kaung Myat Cho",
-      position: "Backend Developer @ Earthlike",
-      avatar: avatarImage,
-      content: `“Working with Freddie was a fantastic experience. He is truly understood my brand and delivered a logo that perfectly captures its essence. The design was creative, unique, and professional, helping my business stand out. Communication was smooth, and the project was completed on time.”`,
-    },
-    {
-      name: "Kaung Myat Cho",
-      position: "Backend Developer @ Earthlike",
-      avatar: avatarImage,
-      content: `“Freddie has been an invaluable asset to our design team. Their expertise in UI/UX design consistently elevates our products by creating intuitive, user-centered interfaces that enhance overall user satisfaction. They demonstrate strong creativity, attention to detail, and a deep understanding of user behavior. He is a awesome Senior UI/UX Designer of our company.”`,
-    },
-    {
-      name: "Kaung Myat Cho",
-      position: "Backend Developer @ Earthlike",
-      avatar: avatarImage,
-      content: `“Freddie has been an invaluable asset to our design team. Their expertise in UI/UX design consistently elevates our products by creating.”`,
-    },
-  ];
 
   return (
     <Box>

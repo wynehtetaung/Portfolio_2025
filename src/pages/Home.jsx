@@ -12,36 +12,14 @@ import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
-import SectionTwoSlide from "../components/SectionTwoSlide";
+import SectionTwoSlide from "../components/ProjectSlider";
 import { useNavigate } from "react-router-dom";
+import { projectData } from '../store/projectData.store';
 
 const Home = () => {
   const navigate = useNavigate();
-  const slideData = {
-    image: [
-      {
-        title: "BINFO APPLICATION1 APPLICATION1",
-        img: pj1,
-      },
-      {
-        title: "BINFO APPLICATION",
-        img: pj2,
-      },
-      {
-        title: "BINFO APPLICATION3",
-        img: pj3,
-      },
-      {
-        title: "BINFO APPLICATION",
-        img: pj4,
-      },
-    ],
-    action: {
-      pause: true,
-      play: true,
-      direction: "right",
-    },
-  };
+
+    const sliderData = projectData.filter(data => data.slider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -73,7 +51,7 @@ const Home = () => {
         <Container maxWidth="lg">
           <SectionTwo />
         </Container>
-        <SectionTwoSlide slideData={slideData} />
+        <SectionTwoSlide slideData={sliderData} />
         <Box
           sx={{
             display: "flex",

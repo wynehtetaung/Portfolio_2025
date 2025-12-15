@@ -1,6 +1,6 @@
 import { Box, Container, Typography, useMediaQuery } from "@mui/material";
-import LOGO from "../assets/images/Freddie....png";
-import LOGO_BLACK from "../assets/images/Freddie... _black.png";
+import LOGO from "../assets/images/Logo/Logo-white.svg";
+import LOGO_BLACK from "../assets/images/Logo/Logo-black.svg";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
@@ -54,6 +54,7 @@ const Nav = () => {
           component={"img"}
           width={111}
           height={29}
+          onClick={() => navigate('/')}
           src={`${
             pathname === "/" || pathname === "/contact" ? LOGO : LOGO_BLACK
           } `}
@@ -165,7 +166,6 @@ const Nav = () => {
         >
           contact
         </Typography>
-        {/* </a> */}
       </Container>
     </Box>
   );

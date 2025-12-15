@@ -2,12 +2,12 @@ import { Box, Button, Typography } from "@mui/material";
 import Marquee from "react-fast-marquee";
 import UpArrowImage from "../assets/images/uparrowIcon.png";
 
-const SectionSlider = ({ slideData }) => {
+const LogoSlider = ({ slideData }) => {
   return (
     <Marquee
-      pauseOnHover={slideData.action.pause}
-      play={slideData.action.play}
-      direction={slideData.action.direction}
+      pauseOnHover={true}
+      play={true}
+      direction={'right'}
     >
       <Box sx={{ display: "flex", overflow: "hidden" }}>
         {slideData.image.map((data, i) => (
@@ -82,4 +82,4 @@ const SectionSlider = ({ slideData }) => {
     </Marquee>
   );
 };
-export default SectionSlider;
+export default LogoSlider;
