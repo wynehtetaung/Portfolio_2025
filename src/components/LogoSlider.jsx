@@ -7,7 +7,7 @@ const LogoSlider = ({ slideData }) => {
     <Marquee
       pauseOnHover={true}
       play={true}
-      direction={'right'}
+      direction={'left'}
     >
       <Box sx={{ display: "flex", overflow: "hidden" }}>
         {slideData.image.map((data, i) => (
