@@ -1,5 +1,6 @@
 import { Box, Button, Input, TextField, Typography } from "@mui/material";
 import Logo from "../assets/images/Logo/Logo-white.svg";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
   return (
@@ -17,7 +18,13 @@ const ContactMe = () => {
         },
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", gap: "45px" }}>
+      <Box
+        component={motion.div}
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -150 }}
+        transition={{ type: "spring", stiffness: 20 }}
+        sx={{ display: "flex", flexDirection: "column", gap: "45px" }}
+      >
         <Box>
           <Typography
             sx={{
@@ -74,7 +81,13 @@ const ContactMe = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: "35px" }}>
+      <Box
+        component={motion.div}
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 150 }}
+        transition={{ type: "spring", stiffness: 20 }}
+        sx={{ display: "flex", flexDirection: "column", gap: "35px" }}
+      >
         <Box
           component={"img"}
           src={Logo}

@@ -1,8 +1,15 @@
 import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
 const UserInfoCard = ({ title, content }) => {
   return (
-    <Box sx={{ width: "300px" }}>
+    <Box
+      component={motion.div}
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 100 }}
+      transition={{ type: "spring", damping: 200 }}
+      sx={{ width: "300px" }}
+    >
       <Typography
         sx={{
           fontSize: 16,

@@ -10,25 +10,24 @@ export const userData = {
 export const skills = [
   {
     title: "User Interface",
-    skill: "90%",
+    skill: 90,
   },
   {
     title: "User Experience",
-    skill: "74%",
+    skill: 74,
   },
   {
     title: "HTML",
-    skill: "62%",
+    skill: 62,
   },
   {
     title: "css",
-    skill: "58%",
+    skill: 58,
   },
   {
     title: "javascript",
-    skill: "40%",
+    skill: 40,
   },
-  
 ];
 
 export const education = {
@@ -106,6 +105,5 @@ export const experience = {
       content:
         "I’m also working as a freelance designer. I’m  designing Logo, Business card, Flyer design and many more... My main role is UI/UX Designer, so I’m designing for Web and App freelance project. If you need to some design for your business, you can ask me for design. Thanks.",
     },
-    
   ],
 };

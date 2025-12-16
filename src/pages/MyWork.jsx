@@ -3,16 +3,17 @@ import Nav from "../components/Nav";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
-import { projectData,projectNavData} from "../store/projectData.store";
+import { projectData, projectNavData } from "../store/projectData.store";
 import { useEffect } from "react";
 import HoverCard from "../components/HoverCard";
+import { motion } from "framer-motion";
 
 const MyWork = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { sub } = useParams();
 
-  const filterData = projectData.filter(data => data.type === sub)
+  const filterData = projectData.filter((data) => data.type === sub);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -66,6 +67,10 @@ const MyWork = () => {
             }}
           >
             <Typography
+              component={motion.div}
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ type: "spring", stiffness: 20 }}
               sx={{
                 color: "#000000",
                 fontSize: { xl: 48, lg: 46, md: 46, sm: 30, xs: 29 },
@@ -77,6 +82,10 @@ const MyWork = () => {
               Check out my <span style={{ color: "#ff0b55" }}>projects.</span>
             </Typography>
             <Typography
+              component={motion.div}
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ type: "spring", stiffness: 20 }}
               sx={{
                 fontSize: { xl: 16, lg: 16, md: 16, sm: 14, xs: 12 },
                 mt: "5px",
@@ -117,6 +126,10 @@ const MyWork = () => {
             }}
           >
             <Box
+              component={motion.div}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ type: "spring", stiffness: 20 }}
               sx={{
                 display: "flex",
                 alignItems: "center",

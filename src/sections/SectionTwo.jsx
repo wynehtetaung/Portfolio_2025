@@ -21,7 +21,7 @@ const SectionTwo = () => {
         Check out my <span style={{ color: "#FF0B55" }}>projects.</span>
       </Typography>
       <Typography
-      component={motion.p}
+            component={motion.p}
             whileInView={{opacity : 1,x:0}}
             initial = {{opacity: 0,x:100}}
             transition={{ type: "spring", stiffness: 20 }}

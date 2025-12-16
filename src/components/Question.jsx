@@ -8,6 +8,7 @@ import {
 import { faqs } from "../store/faqs.store";
 import { Remove as RemoveIcon, Add as AddIcon } from "@mui/icons-material";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Question = () => {
   const [expanded, setExpanded] = useState(null);
@@ -35,6 +36,11 @@ const Question = () => {
           }}
         >
           <AccordionSummary
+            component={motion.div}
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 300 }}
+            // transition={{ type:"keyframes", stiffness: 100 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
             expandIcon={
               expanded === faq.id ? (
                 <RemoveIcon sx={{ color: "#ff007f" }} />

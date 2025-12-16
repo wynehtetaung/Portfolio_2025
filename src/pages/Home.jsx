@@ -1,10 +1,6 @@
 import { Box, Button, Container } from "@mui/material";
 import SectionOne from "../sections/SectionOne";
 import SectionTwo from "../sections/SectionTwo";
-import pj1 from "../assets/images/pj1.png";
-import pj2 from "../assets/images/pj2.png";
-import pj3 from "../assets/images/pj3.png";
-import pj4 from "../assets/images/pj4.png";
 import upArrow from "../assets/images/arrow-up-right.png";
 import SectionThree from "../sections/SectionThree";
 import SectionFour from "../sections/SectionFour";
@@ -61,7 +57,7 @@ const Home = () => {
           }}
         >
           <Button
-            component={motion.Button}
+            component={motion.button}
             whileInView={{y:0}}
             initial={{ y: 100 }}
             transition={{ type: "spring", stiffness: 20 }}

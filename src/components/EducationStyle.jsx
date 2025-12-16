@@ -1,9 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import Calender from "../assets/images/Calender 1.png";
+import { motion } from "framer-motion";
 
 const EducationStyle = ({ information }) => {
   return (
-    <Box>
+    <Box
+      component={motion.div}
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 200 }}
+      transition={{ duration: 2 }}
+    >
       <Typography
         sx={{
           color: "#222222",

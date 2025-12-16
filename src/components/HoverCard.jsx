@@ -1,9 +1,14 @@
 import { Box, Button, Typography } from "@mui/material";
 import UpArrowImage from "../assets/images/uparrowIcon.png";
+import { motion } from "framer-motion";
 
 const HoverCard = ({ image, title, action }) => {
   return (
     <Box
+      component={motion.div}
+      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 2.5 }}
       sx={{
         mb: "15px",
         position: "relative",

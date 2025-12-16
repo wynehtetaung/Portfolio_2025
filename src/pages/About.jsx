@@ -2,13 +2,19 @@ import { Box, Container, Typography } from "@mui/material";
 import Nav from "../components/Nav";
 import ButtonResume from "../components/Button_resume";
 import aboutProfileImage from "../assets/images/profile_about.png";
-import { userData, skills, education, experience } from "../store/aboutData.store";
+import {
+  userData,
+  skills,
+  education,
+  experience,
+} from "../store/aboutData.store";
 import UserInfoCard from "../components/UserInfoCard";
 import Skill from "../components/Skill";
 import EducationStyle from "../components/EducationStyle";
 import ContactMe from "../sections/ContactMe";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   useEffect(() => {
@@ -29,6 +35,10 @@ const About = () => {
       <Nav />
       <Container maxWidth="lg" sx={{ mb: "70px" }}>
         <Box
+          component={motion.div}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ type: "spring", stiffness: 20 }}
           sx={{
             mt: "45px",
             display: "flex",
@@ -161,7 +171,7 @@ const About = () => {
             }}
           >
             {skills.map((skill, i) => (
-              <Skill key={i} skill={skill} />
+              <Skill key={i} skill={skill} index={i} />
             ))}
           </Box>
         </Box>

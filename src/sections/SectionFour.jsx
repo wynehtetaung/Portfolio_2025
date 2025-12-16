@@ -2,13 +2,17 @@ import { Box, Typography } from "@mui/material";
 import ReviewCard from "../components/ReviewCard";
 import Question from "../components/Question";
 import ButtonResume from "../components/Button_resume";
-import { reviewCardData } from '../store/reviewData.store';
+import { reviewCardData } from "../store/reviewData.store";
+import { motion } from "framer-motion";
 
 const SectionFour = () => {
-
   return (
     <Box>
       <Typography
+        component={motion.p}
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ type: "spring", stiffness: 20 }}
         sx={{
           pt: { xl: "70px", lg: "70px", md: "70px", sm: "70px", xs: "35px" },
           fontSize: { xl: 48, lg: 48, md: 48, sm: 48, xs: 40 },
@@ -40,6 +44,10 @@ const SectionFour = () => {
           }}
         >
           <Typography
+            component={motion.p}
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ type: "spring", stiffness: 20 }}
             sx={{
               minWidth: 320,
               height: "auto",
@@ -52,6 +60,10 @@ const SectionFour = () => {
             <span style={{ color: "#ff0b55" }}>answers.</span>
           </Typography>
           <Typography
+            component={motion.p}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ type: "spring", stiffness: 20 }}
             sx={{
               mt: "10px",
               fontSize: { xl: 16, lg: 16, md: 16, sm: 16, xs: 14 },
@@ -70,6 +82,10 @@ const SectionFour = () => {
           </Typography>
 
           <Box
+            component={motion.div}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            transition={{ type: "spring", stiffness: 20 }}
             sx={{
               mt: {
                 xl: "87px",
